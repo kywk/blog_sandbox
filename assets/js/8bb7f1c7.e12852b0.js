@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[7993],{973:function(e){e.exports=JSON.parse('[{"label":"gitlab","permalink":"/moco/news/tags/gitlab","count":1},{"label":"awesome","permalink":"/moco/news/tags/awesome","count":1}]')}}]);

@@ -4,19 +4,10 @@
         <title>kywk.moco Blog</title>
         <link>https://kywk.github.io/moco/news</link>
         <description>kywk.moco Blog</description>
-        <lastBuildDate>Tue, 24 May 2022 16:25:13 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 May 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-tw</language>
-        <item>
-            <title><![CDATA[Awesome Resources]]></title>
-            <link>https://kywk.github.io/moco/news/awesome</link>
-            <guid>/awesome</guid>
-            <pubDate>Tue, 24 May 2022 16:25:13 GMT</pubDate>
-            <description><![CDATA[This is News Clippins]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="news--discus">news &amp; discus<a class="hash-link" href="#news--discus" title="標題的直接連結">​</a></h2><ul><li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a></li><li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community 👩‍💻👨‍💻</a></li><li><a href="https://iter01.com/" target="_blank" rel="noopener noreferrer">IT人</a></li></ul>]]></content:encoded>
-            <category>awesome</category>
-        </item>
         <item>
             <title><![CDATA[The Future of the GitLab Web IDE]]></title>
             <link>https://kywk.github.io/moco/news/2022/05/24/gitlab-web-ide</link>
@@ -38,6 +29,15 @@ I'd been a fly on the wall for the discussions about that.</p></blockquote><p><a
 上許多討論為何 GitHub 身為 GitLab 最大的對手, GitLab 卻選用了對手母公司的專案作為核心功能.
 順便把曾經被 GitHub 號稱的 21 世紀 IDE - <a href="https://github.com/atom/atom" target="_blank" rel="noopener noreferrer">Atom</a> 抓出來鞭屍一下.</p>]]></content:encoded>
             <category>gitlab</category>
+        </item>
+        <item>
+            <title><![CDATA[Awesome Resources]]></title>
+            <link>https://kywk.github.io/moco/news/awesome</link>
+            <guid>/awesome</guid>
+            <pubDate>Fri, 20 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is News Clippins]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="news--discus">news &amp; discus<a class="hash-link" href="#news--discus" title="標題的直接連結">​</a></h2><ul><li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a></li><li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community 👩‍💻👨‍💻</a></li><li><a href="https://iter01.com/" target="_blank" rel="noopener noreferrer">IT人</a></li></ul>]]></content:encoded>
+            <category>awesome</category>
         </item>
     </channel>
 </rss>

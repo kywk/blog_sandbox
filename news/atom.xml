@@ -2,24 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kywk.github.io/moco/news</id>
     <title>kywk.moco Blog</title>
-    <updated>2022-05-24T16:25:13.000Z</updated>
+    <updated>2022-05-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kywk.github.io/moco/news"/>
     <subtitle>kywk.moco Blog</subtitle>
     <icon>https://kywk.github.io/moco/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[Awesome Resources]]></title>
-        <id>/awesome</id>
-        <link href="https://kywk.github.io/moco/news/awesome"/>
-        <updated>2022-05-24T16:25:13.000Z</updated>
-        <summary type="html"><![CDATA[This is News Clippins]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="news--discus">news &amp; discus<a class="hash-link" href="#news--discus" title="標題的直接連結">​</a></h2><ul><li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a></li><li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community 👩‍💻👨‍💻</a></li><li><a href="https://iter01.com/" target="_blank" rel="noopener noreferrer">IT人</a></li></ul>]]></content>
-        <author>
-            <name>kywk</name>
-            <uri>https://github.io/kywk</uri>
-        </author>
-        <category label="awesome" term="awesome"/>
-    </entry>
     <entry>
         <title type="html"><![CDATA[The Future of the GitLab Web IDE]]></title>
         <id>/2022/05/24/gitlab-web-ide</id>
@@ -45,5 +32,18 @@ I'd been a fly on the wall for the discussions about that.</p></blockquote><p><a
             <uri>https://github.io/kywk</uri>
         </author>
         <category label="gitlab" term="gitlab"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Awesome Resources]]></title>
+        <id>/awesome</id>
+        <link href="https://kywk.github.io/moco/news/awesome"/>
+        <updated>2022-05-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is News Clippins]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="news--discus">news &amp; discus<a class="hash-link" href="#news--discus" title="標題的直接連結">​</a></h2><ul><li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a></li><li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community 👩‍💻👨‍💻</a></li><li><a href="https://iter01.com/" target="_blank" rel="noopener noreferrer">IT人</a></li></ul>]]></content>
+        <author>
+            <name>kywk</name>
+            <uri>https://github.io/kywk</uri>
+        </author>
+        <category label="awesome" term="awesome"/>
     </entry>
 </feed>
