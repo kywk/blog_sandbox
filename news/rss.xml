@@ -4,7 +4,7 @@
         <title>kywk.moco Blog</title>
         <link>https://kywk.github.io/moco/news</link>
         <description>kywk.moco Blog</description>
-        <lastBuildDate>Tue, 24 May 2022 16:22:50 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 May 2022 16:25:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-tw</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Awesome Resources]]></title>
             <link>https://kywk.github.io/moco/news/awesome</link>
             <guid>/awesome</guid>
-            <pubDate>Tue, 24 May 2022 16:22:50 GMT</pubDate>
+            <pubDate>Tue, 24 May 2022 16:25:13 GMT</pubDate>
             <description><![CDATA[This is News Clippins]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="news--discus">news &amp; discus<a class="hash-link" href="#news--discus" title="標題的直接連結">​</a></h2><ul><li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a></li><li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community 👩‍💻👨‍💻</a></li><li><a href="https://iter01.com/" target="_blank" rel="noopener noreferrer">IT人</a></li></ul>]]></content:encoded>
             <category>awesome</category>
