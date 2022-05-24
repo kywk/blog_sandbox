@@ -3,7 +3,6 @@ title: "GNU: Tar 加密打包"
 tags: ["CLI", "GNU"]
 
 date: 2020-12-10T17:31:07+08:00
-images: []
 categories: ["cli"]
 ---
 

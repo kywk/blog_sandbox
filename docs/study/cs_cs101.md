@@ -3,13 +3,13 @@ title: "[CS101] 初心者的計概與 coding 火球術"
 tags: ['study']
 
 date: 2022-05-17T23:02:43+08:00
-images: ["https://lh3.googleusercontent.com/pw/AM-JKLU9u8dMJBxj_-nz8TjDcbeblpdfX7gIyN6WAdbgMLhth6JHHxyGaEFciEp1o9qiX_p8e4Wi5SeGNU4HWUP3n3xjGYug2X-9Ib-fyKuhzPbjntdHnDOA2BJHcwVUnfsc_xhPbM5jzit-K94aANftsP9WRw=w800-no?authuser=0"]
+image: "https://lh3.googleusercontent.com/pw/AM-JKLU9u8dMJBxj_-nz8TjDcbeblpdfX7gIyN6WAdbgMLhth6JHHxyGaEFciEp1o9qiX_p8e4Wi5SeGNU4HWUP3n3xjGYug2X-9Ib-fyKuhzPbjntdHnDOA2BJHcwVUnfsc_xhPbM5jzit-K94aANftsP9WRw=w800-no?authuser=0"
 categories: ['study']
 ---
 
-# [讀書心得] CS101 初心者的計概與 coding 火球術 #
+__[讀書心得] CS101 初心者的計概與 coding 火球術__
 
-這門課是在 [[ALG101] 先別急著寫 Leetcode](./cs_alg101) 課程中看到的延伸閱讀資訊,
+這門課是在 [[ALG101] 先別急著寫 Leetcode](cs_alg101.md) 課程中看到的延伸閱讀資訊,
 相對於 ALG101 更加入門和廣泛. 以學習曲線來看其實是該先學 CS101 再學 ALG101 更加合適.
 
 這門課更加入門, 本篇心得將不依章節條列, 邊聽課邊隨手記些雜筆, 也可能什麼都沒記.

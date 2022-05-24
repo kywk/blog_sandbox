@@ -56,6 +56,28 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'news',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'news',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './news',
+        showReadingTime: true,
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -72,7 +94,13 @@ const config = {
             position: 'left',
             label: 'Notes',
           },
+          {to: '/news', label: 'News', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://kywk.github.io/',
+            label: 'kywk.life',
+            position: 'right',
+          },
           {
             href: 'https://github.com/kywk/',
             label: 'GitHub',
@@ -119,7 +147,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} moco, kywk. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

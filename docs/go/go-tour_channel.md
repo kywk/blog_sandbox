@@ -9,7 +9,7 @@ categories: ["go"]
 
 # [Go] Tour: Goroutine 和 Channel 心得筆記 #
 
-[_承: Go: Goroutine 心得筆記_](./go-tour_goroutine)
+[_承: Go: Goroutine 心得筆記_](go-tour_goroutine.md)
 
 
 ## Channel 介紹 ##

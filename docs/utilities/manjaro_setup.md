@@ -1,5 +1,5 @@
 ---
-title: "Manjaro: 系統安裝紀錄"
+title: "Manjaro 系統安裝紀錄"
 tags: ["Manjaro", "linux", "kywk"]
 
 date: 2022-05-11T12:01:39+08:00

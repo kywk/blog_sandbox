@@ -314,4 +314,4 @@ Channel 阻塞的特性, 搭配 Goroutine 可以用來作流程管控等功能.
 而 Channel 的阻塞特性, 在多執行緒中發揮方便強大的能力, 後篇繼續討論 Channel.
 
 
-[_續: Go: Goroutine 和 Channel 心得筆記_](./go-tour_channel)
+[_續: Go: Goroutine 和 Channel 心得筆記_](go-tour_channel.md)

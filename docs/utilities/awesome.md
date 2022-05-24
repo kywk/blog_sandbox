@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
-title: Awesome
+title: Awesome Resources
 tags: ["aewsome", "utilities"]
 ---
 
-# Awesome Resources #
+## Utilities ##

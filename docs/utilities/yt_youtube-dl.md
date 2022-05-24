@@ -1,5 +1,5 @@
 ---
-title: "YT: youtube-dl 下載影片"
+title: "youtube-dl 下載影片"
 tags: ["utilities", "youtube"]
 
 date: 2021-02-07T11:46:48+08:00

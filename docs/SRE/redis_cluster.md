@@ -62,7 +62,7 @@ cow@sandbox:~/tmp/redis/src# ./redis-server
 出現 __Ready to accept connections__ 後表示 Redis 程式可正常運作, 
 可再依需要把執行檔複製到 `/usr/local/bin' 之類系統資料夾中.
 
-而警告訊息的排除可參考: [Redis 警告訊息排除](./redis_troubleshooting) 
+而警告訊息的排除可參考: [Redis 警告訊息排除](redis_troubleshooting.md) 
 
 
 ### 準備 config ###

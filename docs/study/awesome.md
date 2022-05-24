@@ -4,4 +4,4 @@ title: Awesome
 tags: ["aewsome", "study"]
 ---
 
-# Awesome Tringing Resources #
+## Tringing ##
