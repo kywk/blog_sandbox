@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kywk.github.io/moco/news</id>
+    <title>kywk.moco Blog</title>
+    <updated>2022-05-24T16:22:50.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://kywk.github.io/moco/news"/>
+    <subtitle>kywk.moco Blog</subtitle>
+    <icon>https://kywk.github.io/moco/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Awesome Resources]]></title>
+        <id>/awesome</id>
+        <link href="https://kywk.github.io/moco/news/awesome"/>
+        <updated>2022-05-24T16:22:50.000Z</updated>
+        <summary type="html"><![CDATA[This is News Clippins]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="news--discus">news &amp; discus<a class="hash-link" href="#news--discus" title="標題的直接連結">​</a></h2><ul><li><a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a></li><li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">DEV Community 👩‍💻👨‍💻</a></li><li><a href="https://iter01.com/" target="_blank" rel="noopener noreferrer">IT人</a></li></ul>]]></content>
+        <author>
+            <name>kywk</name>
+            <uri>https://github.io/kywk</uri>
+        </author>
+        <category label="awesome" term="awesome"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Future of the GitLab Web IDE]]></title>
+        <id>/2022/05/24/gitlab-web-ide</id>
+        <link href="https://kywk.github.io/moco/news/2022/05/24/gitlab-web-ide"/>
+        <updated>2022-05-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2022.05.24 The Future of the GitLab Web IDE]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://about.gitlab.com/blog/2022/05/23/the-future-of-the-gitlab-web-ide/" target="_blank" rel="noopener noreferrer">GitLab 發表新 WebIDE 的特色與整合說明</a>,
+是以 VS Code 核心引擎 <a href="https://microsoft.github.io/monaco-editor/" target="_blank" rel="noopener noreferrer">Monaco</a>
+開發整合而來的.</p><blockquote><p>The Web IDE is built on top of the fantastic open source project, Monaco.
+What made Monaco a great choice as the foundation of the Web IDE
+is also what makes it more difficult to address all these concerns holistically.
+Monaco is just that: a foundation. We have to implement all these workflows
+and features ourselves. Meanwhile, another open source project has been
+laser-focused on delivering a lovable IDE on top of Monaco.</p></blockquote><p>VS Code 確實是 Microsoft 近年來最受歡迎肯定的產品專案.
+以 VS Code 為基礎整合開發其實合理. 但因微軟同時擁有 GitHub, 整件事變得有趣.</p><blockquote><p>It's interesting to me that GitLab is adopting a Microsoft product
+(VS Code) and Microsoft owns a significant competitor in GitHub.
+Nothing intelligent to say about that other than to wish
+I'd been a fly on the wall for the discussions about that.</p></blockquote><p><a href="https://news.ycombinator.com/item?id=31487079" target="_blank" rel="noopener noreferrer">Hacker News</a>
+上許多討論為何 GitHub 身為 GitLab 最大的對手, GitLab 卻選用了對手母公司的專案作為核心功能.
+順便把曾經被 GitHub 號稱的 21 世紀 IDE - <a href="https://github.com/atom/atom" target="_blank" rel="noopener noreferrer">Atom</a> 抓出來鞭屍一下.</p>]]></content>
+        <author>
+            <name>kywk</name>
+            <uri>https://github.io/kywk</uri>
+        </author>
+        <category label="gitlab" term="gitlab"/>
+    </entry>
+</feed>

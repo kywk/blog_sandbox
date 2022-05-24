@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[9682],{4944:function(o){o.exports=JSON.parse('[{"label":"docusaurus","permalink":"/moco/blog/tags/docusaurus","count":1}]')}}]);
