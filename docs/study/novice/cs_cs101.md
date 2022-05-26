@@ -1,10 +1,10 @@
 ---
 title: "[CS101] 初心者的計概與 coding 火球術"
-tags: ['study']
+tags: [study, novice, cs]
 
 date: 2022-05-17T23:02:43+08:00
 image: "https://lh3.googleusercontent.com/pw/AM-JKLU9u8dMJBxj_-nz8TjDcbeblpdfX7gIyN6WAdbgMLhth6JHHxyGaEFciEp1o9qiX_p8e4Wi5SeGNU4HWUP3n3xjGYug2X-9Ib-fyKuhzPbjntdHnDOA2BJHcwVUnfsc_xhPbM5jzit-K94aANftsP9WRw=w800-no?authuser=0"
-categories: ['study']
+categories: [study]
 ---
 
 __[讀書心得] CS101 初心者的計概與 coding 火球術__

@@ -1,10 +1,10 @@
 ---
 title: "Nginx: Let's Encrypt SSL"
-tags: ["SRE", "nginx"]
+tags: [SRE, nginx]
 
 date: 2021-04-25T20:40:21+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3dlde6AddUGr3W5sFOvL0D8daOPkJQdjAiPB8u9xRorMWgPcie0_c6Gt7reWYvL9IMqe4M6NLpwn-FvoBAkNpmRWwZ0SrKJFibtnC6IxzmdSWEtY1u_dMmf4b0YnUewWCkHbEyWCd3Nzod1tiNwb0IiQQ=w800-no?authuser=0"]
-categories: ["SRE"]
+image: "https://lh3.googleusercontent.com/pw/ACtC-3dlde6AddUGr3W5sFOvL0D8daOPkJQdjAiPB8u9xRorMWgPcie0_c6Gt7reWYvL9IMqe4M6NLpwn-FvoBAkNpmRWwZ0SrKJFibtnC6IxzmdSWEtY1u_dMmf4b0YnUewWCkHbEyWCd3Nzod1tiNwb0IiQQ=w800-no?authuser=0"
+categories: [SRE]
 ---
 
 [Nginx] 手動 Let's Encrypt SSL 憑證與設定
@@ -28,7 +28,8 @@ Let's Encrypt 是由多家公司與非營利組織共同創立的數位憑證認
 無法自動申請, 需手動申請憑證與驗證.
 
 
-### 手動申請憑證 ###
+手動申請憑證
+----------
 
 手動下載 [certbot](https://certbot.eff.org), 放置主機上.
 或利用套件管理安裝亦可.
@@ -66,7 +67,8 @@ $ ./certbot-auto certonly --manual --no-self-upgrade --dry-run --preferred-chall
 畢竟下次申請時內容需要替換, 留著沒意義. 
 
 
-### Nginx 設定 ###
+Nginx 設定
+---------
 
 取得憑證後把相關憑證檔案放在 nginx 可以存取的資料夾下, 
 修改 `/etc/nginx/sites-enabled/deafult` 
@@ -92,7 +94,9 @@ $ sudo nginx -s reload
 ```
 
 
-_Reference:_
+See Also
+--------
+
 -   [[教學] 申請Let’s Encrypt憑證與啟用https (Nginx) | 辛比誌](https://xenby.com/b/101-教學-申請lets-encrypt憑證與啟用https-nginx)
 -   [解析 Certbot（Let's encrypt） 使用方式 | DEVLOG of andyyou](https://andyyou.github.io/2019/04/13/how-to-use-certbot/)
 -   [acme.sh 自動化申請和更新 Let's Encrypt 萬用 SSL 憑證教學 | KJie Notes](https://www.kjnotes.com/devtools/103)

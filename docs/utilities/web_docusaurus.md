@@ -1,6 +1,6 @@
 ---
 title: "Docusaurus 設定筆記"
-tags: [docusaurus, CMS]
+tags: [docusaurus]
 
 date: 2022-05-24T11:46:48+08:00
 categories: [docusaurus]

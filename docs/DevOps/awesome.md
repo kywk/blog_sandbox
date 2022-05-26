@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
-title: Awesome
-tags: ["aewsome", "DevOps"]
+title: Awesome Resources
+tags: [awesome, DevOps]
 ---
 
 # Awesome DevOps Resources #

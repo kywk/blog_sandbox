@@ -1,10 +1,9 @@
 ---
 title: "youtube-dl 下載影片"
-tags: ["utilities", "youtube"]
+tags: [utilities, youtube]
 
 date: 2021-02-07T11:46:48+08:00
-images: []
-categories: ["youtube"]
+categories: [youtube]
 ---
 
 [Youtube] 利用 youtube-dl 下載影片

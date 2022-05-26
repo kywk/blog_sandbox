@@ -1,13 +1,11 @@
 ---
 title: "[ALG101] 先別急著寫 Leetcode"
-tags: ["study", "leetcode"]
+tags: [study, novice, cs, leetcode]
 
 date: 2022-05-12T15:25:43+08:00
 image: "https://lh3.googleusercontent.com/pw/AM-JKLXBM2WNrQiA9JaB2VjaugnQeGRarNi_5bcSokqeJrLIa6Jyo-SIIb5qiCn7SsAnRPD4imI7f0W_iLY4jHmIK7dZomlR1sV6PxEh2Jkc9eJ5BvE39AfObGDxSp9hQDEpIKkZTzEggyazrhvlxPcyjpqRdw=w800-no?authuser=0"
-categories: ["study"]
+categories: [study]
 ---
-
-## [讀書心得] ALG101 先別急著寫 Leetcode ##
 
 在準備刷題找資源時, 看到了 [[ALG101] 先別急著寫 leetcode | Lidemy 鋰學院](https://lidemy.com/p/alg101-leetcode). 
 這是胡立製作的一系列免費課程, 談刷題之前有些技能是要學會的, 不然會大幅影響刷題所獲得的經驗值ㄡ.

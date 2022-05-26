@@ -1,15 +1,18 @@
 ---
-title: "Tour: Closure"
-tags: ["Go", "go-tour"]
+title: "Closure"
+tags: [Go, go-tour]
 
 date: 2022-04-13T10:05:05+08:00
-images: ["https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"]
+image: "https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"
 categories: ["go"]
 ---
 
-# [Go] Tour: Closure 心得筆記 #
+[Go] Tour: Closure 心得筆記
+==========================
 
-## 匿名函數 Anonymous functions ##
+
+匿名函數 Anonymous functions
+---------------------------
 
 匿名函式指不需要定義函式名的一種函式實現方式.  
 近期熱門的語言中, JavaScript 中很常見匿名函式,
@@ -63,7 +66,8 @@ func main() {
 因此最後顯示結果為 12.
 
 
-## 閉包 Closure ##
+閉包 Closure
+------------
 
 可以在函式中建立匿名函式, 引發了一個有趣的事實, 先來看個例子:
 
@@ -204,7 +208,8 @@ func main() {
 重複呼叫閉包函式, 可透過 x, y 的變化, 完成費氏數列的產出.
 
 
-## See Also ##
+See Also
+--------
 
 -   [What is a Closure? - Calhoun.io](https://www.calhoun.io/what-is-a-closure/#closuresprovidedataisolation)  
     [5 Useful Ways to Use Closures in Go](https://www.calhoun.io/5-useful-ways-to-use-closures-in-go/)  

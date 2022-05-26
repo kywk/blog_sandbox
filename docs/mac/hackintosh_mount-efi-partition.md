@@ -1,16 +1,18 @@
 ---
 title: "掛載 EFI 磁區"
-tags: ["Mac", "hackintosh"]
+tags: [Mac, hackintosh]
 
 date: 2021-05-14T14:56:41+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3fnLstA2rsbmbt0hI7IWqhfzOU17UzGFO6pEIfoC2_x_l526rOlZ3_p4RbWvVFWlT6uMlnPMzjCSxDILtn7Er5Ch0JPYJReE0BhmCXqJh6TsqrygLrL17dcz1Dyq3eJ7MZhHDqQhvWbX3zJvneD1CRanA=w800-no?authuser=0"]
-categories: ["mac"]
+image: "https://lh3.googleusercontent.com/pw/ACtC-3fnLstA2rsbmbt0hI7IWqhfzOU17UzGFO6pEIfoC2_x_l526rOlZ3_p4RbWvVFWlT6uMlnPMzjCSxDILtn7Er5Ch0JPYJReE0BhmCXqJh6TsqrygLrL17dcz1Dyq3eJ7MZhHDqQhvWbX3zJvneD1CRanA=w800-no?authuser=0"
+categories: [hackintosh]
 ---
 
 [Mac] 掛載 EFI 磁區方式
 =====================
 
-### EFI 系統磁區 ###
+
+EFI 系統磁區
+-----------
 
 EFI系統磁碟分割區是什麼?
 
@@ -27,7 +29,8 @@ EFI 分割區有什麼? 它包含了 4 個主要部分：啟動程式, 裝置驅
 但畢竟 EFI 磁區就是個標準的 FAT/FAT32 磁區, macOS 內建的 `diskutil` 就可以掛載 EFI 磁區了.
 
 
-### diskutil ###
+diskutil
+--------
 
 diskutil 是 macOS 內建的 CLI 工具之一. 
 macOS 上跟磁碟操作相關軟體, 雖有著不同 UI 設計與操作流程外, 
@@ -61,6 +64,7 @@ EFI 磁區為 FAT/FAT32 檔案系統, 是 macOS 預設支援的格式, 所以會
 掛載完後就可以用任何工具去處理 EFI 的設定配置檔了.
 
 
-### See Also ###
+See Also
+--------
 
 -   [MacOS 磁碟管理工具 diskutil 介紹](https://www.itread01.com/content/1546611722.html)

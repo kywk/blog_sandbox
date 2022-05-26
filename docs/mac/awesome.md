@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
-title: Awesome
-tags: ["aewsome", "Mac"]
+title: Awesome Resources
+tags: [Mac, awesome]
 ---
 
 Awesome Macnintosh Resources

@@ -1,11 +1,10 @@
 ---
 title: "Ubuntu: Nginx + PHP"
-tags: ["SRE", "ubuntu", "nginx", "php"]
+tags: [SRE, ubuntu, nginx, php]
 
 date: 2021-03-16T16:58:20+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3eEjuPzkzGlfvO-sUeB3BeuDd4MxMyUP2r4vJp53f2rK8p-vaRCNdC-UxOMDAQhANNfSTQr9fD4wJBSuDu3dXYIoMYDjaLJV6Np0KQZxnfY0VOm-JrNfVj_c0AjrP0jFEBKnJJrw8qAr8quoeHa5OuKJA=w750-h375-no?authuser=0"]
-categories: ["ubuntu"]
-toc: true
+image: "https://lh3.googleusercontent.com/pw/ACtC-3eEjuPzkzGlfvO-sUeB3BeuDd4MxMyUP2r4vJp53f2rK8p-vaRCNdC-UxOMDAQhANNfSTQr9fD4wJBSuDu3dXYIoMYDjaLJV6Np0KQZxnfY0VOm-JrNfVj_c0AjrP0jFEBKnJJrw8qAr8quoeHa5OuKJA=w750-h375-no?authuser=0"
+categories: [ubuntu]
 ---
 
 [Ubuntu] 利用 Nginx 伺服器執行 PHP 程式
@@ -289,7 +288,6 @@ $ sudo service nginx restart
 ![](https://lh3.googleusercontent.com/pw/ACtC-3euV0DG5x_6NEszyLYrW1cW8cFj6p7qapfHbldw0am_PCAEX3lYENsxrPIBCA4gCCt37f-GBJv5Gs6138SYf8sf4l_wmKGbv1HbnmUH-q8uUWMHCnZ7cylYvCLxiXSwrzIgQ3K2EgX8Ido8J0jd0ZTbLw=w1088-h508-no?authuser=0)
 
 
-
 See Also
 --------
 
@@ -303,10 +301,6 @@ Cache 的設置相當考驗 SRE 對 PHP 服務了解程度, 並非所有服務�
 這另篇再討論了.
 
 需要花蠻多時間嘗試調整參數, 搭配效能測試工具來檢查, 讓伺服器發揮最大效用.
-
-
-
-### Reference ###
 
 -   [使用Ubuntu Server透過Nginx伺服器執行PHP程式 | MagicLen](https://magiclen.org/ubuntu-server-nginx-php/)
 -   [無堅不摧，唯快不破！快改用 Nginx + PHP-FPM 取代 Apache 吧！ - Soul & Shell Blog](https://blog.toright.com/posts/3890/無堅不摧，唯快不破！快改用-nginx-php-fpm-取代-apache-吧！.html)

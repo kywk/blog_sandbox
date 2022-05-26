@@ -1,6 +1,6 @@
 ---
 title: "Catalina on MBA 2011"
-tags: ["Mac", "hackintosh"]
+tags: [Mac, hackintosh]
 
 date: 2021-05-16T11:45:54+08:00
 images: ["https://lh3.googleusercontent.com/pw/ACtC-3fVXuzPrSrtx2R10grZCwGi5meFEzFOuBSgtw8JrnWZ4N9G2MOCHLb41djGH8w9KeBv3wazMhPvopYCxvlLDcYrhAhB8JwJC4RYb4WkZo2EWUEXVjMquzbs7S5wYhLbasNhNq1nXFXKqZ6pqD4_qNv-8w=w800-no?authuser=0"]
@@ -27,7 +27,8 @@ MacBook Air 爹不疼娘不愛地成了孤兒。
 _越獄安裝 macOS Mojava/Catalina 在非官方支援的硬體設備中，仍存有不穩定的風險，後果自負。_
 
 
-### 準備工作 ###
+準備工作
+-------
 
 確認主機型號，並非所有舊電腦都可以透過 Patcher 安裝 Mojava/Catalina，
 官方有列出支援的主機，請自行參考官網說明。
@@ -44,7 +45,8 @@ Macbook Air 2011 系統型號為 `MacBookAir4.2`
     ![](https://lh3.googleusercontent.com/pw/ACtC-3d_P68vX1FQrc3cOVDFTsZXnykQ_iChRuqJ5IqrUarM4K9RGkGO2455iA67EsHJDgYQC83jwGLpmHA_hAV1z_vywntth5N26A421ZeliQa-9eOzpkt3xOlCgnC28kxn66ZH_9llUpc5LU1NDH-yilQt2g=w800-no?authuser=0)
 
 
-### 製作安裝碟 ###
+製作安裝碟
+--------
 
 將隨身碟格式化成GUID的擴充格式（日誌式）
 
@@ -65,7 +67,8 @@ Macbook Air 2011 系統型號為 `MacBookAir4.2`
 ![](https://lh3.googleusercontent.com/pw/ACtC-3dsnASd-CKeHD1Bq-UFWoetPaVGOLVivHOzqPsD4-GseR60nl8ewhcWbvy-DcPoqQyFFYu21jwUpVErZL3HrCGTXDA37w_akjF9fuBrP3pPfyS3pQq1h3IOQjK0IQpXBl9LijItDsXYeSCW3DMsoj6Wsg=w800-no?authuser=0)
 
 
-### 安裝系統 ###
+安裝系統
+-------
 
 USB 開機碟製作完成後，在 Macbook Air 2011 上使用隨身碟開機與安裝系統，
 安裝選單介面略有不同，但安裝流程和一般安裝 macOS 並無不同。
@@ -80,7 +83,8 @@ USB 開機碟製作完成後，在 Macbook Air 2011 上使用隨身碟開機與�
 所以需要再次透過 USB 隨身碟開機，安裝修正檔。
 
 
-### 安裝修正檔 ###
+安裝修正檔
+--------
 
 第一次開機的時候按下 `Option` 不放，再次選擇USB安裝磁碟。
 這次回來安裝畫面之後，選擇下方的這個 `macOS Post Install`。
@@ -109,7 +113,8 @@ USB 開機碟製作完成後，在 Macbook Air 2011 上使用隨身碟開機與�
 也就是非必要的話，無須第一時間更新系統。
 
 
-### 後記 ###
+後記
+----
 
 因手上其他筆電皆為 macOS BigSur，介面操作和權限管理上和 Catalina 較為相近，
 所以又把 MacBook Air 重新安裝 Catalina。
@@ -117,7 +122,8 @@ USB 開機碟製作完成後，在 Macbook Air 2011 上使用隨身碟開機與�
 安裝流程大致雷同，就不另筆記了。
 
 
-### See Also ###
+See Also
+--------
 
 上述流程和參考資料幾乎一樣，有部分內容也是直接引用參考資料。
 所以發文，一來自己紀錄過會比較有記憶點，

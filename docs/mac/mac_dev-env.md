@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
 title: "開發環境建構"
-tags: ["Mac", "kywk"]
+tags: [Mac, kywk]
 
 date: 2021-02-26T14:53:37+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3cYYtkzJjo_oG7Gzqq8T8XQm4V_qLE3wGWVKOahp6YT4lo-on60NJmjrkkatnizX1b-uID-MCM2ztsXH9z27cMRtql3PA5cpYZYbMfSPuM5Yh3MmqnjnnXYkTg6vtIiBL5SGAQRRAI9zEBIOoyP3tZpuA?authuser=0"]
-categories: ["mac"]
+image: "https://lh3.googleusercontent.com/pw/ACtC-3cYYtkzJjo_oG7Gzqq8T8XQm4V_qLE3wGWVKOahp6YT4lo-on60NJmjrkkatnizX1b-uID-MCM2ztsXH9z27cMRtql3PA5cpYZYbMfSPuM5Yh3MmqnjnnXYkTg6vtIiBL5SGAQRRAI9zEBIOoyP3tZpuA?authuser=0"
+categories: [mac]
 ---
 
 [Mac] 開發環境建構 2021.Feb

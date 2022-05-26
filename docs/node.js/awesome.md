@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
-title: Awesome
-tags: ["Node.js", "aewsome"]
+title: Awesome Resources
+tags: [Node.js, awesome]
 ---
 
 # Awesome Node.js Resources #

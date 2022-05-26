@@ -1,18 +1,20 @@
 ---
-title: "Tour: Goroutine/Channel"
-tags: ["Go", "go-tour"]
+title: Goroutine / Channel
+tags: [Go, go-tour]
 
 date: 2022-04-21T12:03:41+08:00
-images: ["https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"]
-categories: ["go"]
+image: "https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"
+categories: [go]
 ---
 
-# [Go] Tour: Goroutine 和 Channel 心得筆記 #
+[Go] Tour: Goroutine 和 Channel 心得筆記
+======================================
 
 [_承: Go: Goroutine 心得筆記_](go-tour_goroutine.md)
 
 
-## Channel 介紹 ##
+Channel 介紹
+-----------
 
 前篇藉由兩個在多執行緒中重要的議題: 等待及變數共享, 帶出 Channel 強大的處理能力, 接著深入了解 Channel.
 
@@ -130,7 +132,8 @@ Unbuffered Channel 的問題是: 如果寫方執行時間較讀取方短, 寫入
 為了解決寫入時等待問題, 可以使用另一種 Channel: Buffered Channel.
 
 
-## Buffered Channel ##
+Buffered Channel
+----------------
 
 ``` go
 ch := make(chan int, 100)
@@ -237,7 +240,8 @@ FINISH. current first data on buffer is:  1
 -   main 推入第六筆資料, 程式正確結束. 此時 Channel 第一筆資料為 `1`
 
 
-## Close channel ##
+Close channel
+-------------
 
 從 Channel 拉取資料時, 可以藉由第二個回傳值確認 Channel 是否被關閉, 常會在迴圈中使用. 
 如果被關閉的話代表此 Channel 已經不再使用, 可以結束迴圈.
@@ -364,7 +368,8 @@ read i: 7
 `range` 結束僅以 channel close 為準.
 
 
-## Select ##
+Select
+------
 
 在 Channel 推入/拉取時, 因 Channel 阻塞的特性, 會有一段等待的時間而造成 Goroutine 無法回應. 
 如果此 Goroutine 是負責處理畫面的, 使用者就會看到畫面 lag 的情況, 這是我們不想見的情況.
@@ -446,7 +451,8 @@ main goroutine finished # main goroutine 解除阻塞並結束程式
 因為有 `default` 可以設置, 當 Channel 阻塞時也可以藉由 `default` 輸出資訊讓使用者知道.
 
 
-## 小結 ##
+小結
+----
 
 Channel 是 Goroutine 的好幫手, 前篇善用 Channel 的阻塞特性, 
 可以用來管理 Goroutine 共用變數存取等控制.
@@ -463,7 +469,8 @@ Channel 傳回的第二個參數: ok, 可以判斷此 Channel 是否已經關閉
 __藉由 Goroutine 及 Channel 簡單的語法但是強大的能力使工程師開發多工程式的時候可以寫出優雅又易於維護的代碼, 是 Go 語言的優勢之一__
 
 
-## See Also ##
+See Also
+--------
 
 -   [Go 的並發：Goroutine 與 Channel 介紹 - Limitless Ping](https://peterhpchen.github.io/2020/03/08/goroutine-and-channel.html)
 -   [Channel 與Goroutine - Golang 筆記](https://easonwang.gitbook.io/golang/ji-ben-yu-fa/channel)

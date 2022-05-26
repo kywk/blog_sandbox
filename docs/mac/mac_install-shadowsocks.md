@@ -1,11 +1,10 @@
 ---
 title: "shadowsocks setup"
-tags: ["Mac"]
+tags: [Mac]
 
 date: 2021-03-15T15:33:18+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3d0i64fe-5XcNdEIkJXE_ucdKG_74gSGLz5YO2oik795zztBL7450Ff7dEQpMGRBXf7RKVteWTfqKM_efzjXja7JGyS3ZCUoPfkPJN61wfga53Tgo8mcFyWOFi_68TDQUZyNIvhEaUPyKPzgWAWHbwOHA=w1280-h720-no?authuser=0"]
-categories: ["mac"]
-toc: true
+image: "https://lh3.googleusercontent.com/pw/ACtC-3d0i64fe-5XcNdEIkJXE_ucdKG_74gSGLz5YO2oik795zztBL7450Ff7dEQpMGRBXf7RKVteWTfqKM_efzjXja7JGyS3ZCUoPfkPJN61wfga53Tgo8mcFyWOFi_68TDQUZyNIvhEaUPyKPzgWAWHbwOHA=w1280-h720-no?authuser=0"
+categories: [mac]
 ---
 
 [Mac] shadowsocks setup 

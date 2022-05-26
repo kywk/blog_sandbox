@@ -1,10 +1,10 @@
 ---
 title: "Git: Remote branch check"
-tags: ["git"]
+tags: [git]
 
-categories: ["git"]
 image: "https://lh3.googleusercontent.com/pw/ACtC-3djQkrvy1aqdMWCu9oEoqndQVIiLE9G5ZtlbDehi8_UcJ9pYib4aWForkHYHSu1voqdKMnCowTwGh1MXSnGeNrFwXRaOUCMD8s4rCZ4IuzWXIZ2khQ8KiJyT6SYlbLrnYYqONwaPZxlR8rReuWWMO7SYw=w8000-no?authuser=0"
 date: 2021-04-12T15:13:11+08:00
+categories: ["git"]
 ---
 
 [Git] check if remote branch exists on a given remote repository

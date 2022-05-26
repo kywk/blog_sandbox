@@ -1,10 +1,9 @@
 ---
 title: "iftop 安裝失敗解決"
-tags: ["Mac"]
+tags: [Mac]
 
 date: 2020-12-07T16:48:04+08:00
-images: []
-categories: ["mac"]
+categories: [mac]
 ---
 
 [Mac] iftop 安裝失敗與解決方式

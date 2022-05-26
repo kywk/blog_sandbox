@@ -1,11 +1,10 @@
 ---
 title: "Redis: Cluster 建製"
-tags: ["SRE", "redis"]
+tags: [SRE, redis]
 
 date: 2021-05-07T09:30:26+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3fIlrxgO6AX1o_tNuiD0YfrwpojgHUZa_OSpR36XoOZ_Ojz9q0Bw9yZ2V9QwSKUqApRMEIPWetv9AQd4TsfGgE0AaZXj7IJ2NV6ffvWj7N_Fjo2EzJ7BaCjZ7Fxx702zh6ZnykZAOChtRM-P1Zr9t0SYQ=w800-no?authuser=0"]
-categories: ["SRE"]
-toc: true
+image: "https://lh3.googleusercontent.com/pw/ACtC-3fIlrxgO6AX1o_tNuiD0YfrwpojgHUZa_OSpR36XoOZ_Ojz9q0Bw9yZ2V9QwSKUqApRMEIPWetv9AQd4TsfGgE0AaZXj7IJ2NV6ffvWj7N_Fjo2EzJ7BaCjZ7Fxx702zh6ZnykZAOChtRM-P1Zr9t0SYQ=w800-no?authuser=0"
+categories: [SRE]
 ---
 
 [Redis] 建製 Redis Cluster
@@ -15,7 +14,9 @@ Redis-Cluster 為無中心化架構, 每個節點都會儲存數據以及整個�
 一組 Redis Cluster 由多個獨立 Redis 節點組成, 
 官方建議六個節點, 其中三個為主節點 (master) 三個為從節點 (slave).
 
-### 安裝 Redis ###
+
+安裝 Redis
+---------
 
 略. 可透過不同系統的套件管理程式安裝, 或參考[官方文件](https://redis.io/download)下載 source tar ball 編譯安裝.
 
@@ -65,7 +66,8 @@ cow@sandbox:~/tmp/redis/src# ./redis-server
 而警告訊息的排除可參考: [Redis 警告訊息排除](redis_troubleshooting.md) 
 
 
-### 準備 config ###
+準備 config
+-----------
 
 官方建議使用六個 node 來建 redis cluster, 
 實際業務運行上通常為六台獨立的主機, 使用同一份 config 部署到六台主機即可.
@@ -119,7 +121,8 @@ masterauth password
 ![](https://lh3.googleusercontent.com/pw/ACtC-3cIjjFhS63ywfyKTBTR55SdYX1NTTwgKzdEjZ9LqEuyrjRM2yUSQ7nWOw_zki8AQLXzLJLjRuseunT-LcW5QTEt6Jg7D18Gf3S5B8yGy_ittXXp19pD8FCj33nBdo-pZbKl2BkLTPK0rzOo5ntxgCUoFQ=w502no?authuser=0)
 
 
-### 啟動 ###
+啟動
+----
 
 透過 `redis-server` 搭配各個設定檔, 逐一啟動不同的 redis-server instance
 
@@ -132,7 +135,9 @@ $ redis-server 7005/redif.conf
 $ redis-server 7006/redif.conf
 ```
 
-### 加入 cluster ###
+
+加入 cluster
+-----------
 
 只是把各個 redis-server instance 跑起來, 彼此尚不是 cluster 裡面的 node,
 需下指令建理 cluster.
@@ -150,8 +155,8 @@ $ redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.
     因上述指令共有六個節點, 所以會建構出三個 master 節點搭配三個 slave 節點.
 
 
-
-### See Also ###
+See Also
+--------
 
 以上是最常見的 Redis Cluster 建製方法, 也是官方建議的方案.
 關於 Redis Cluster 進一步資訊, [Redis初步學習整理——第五節Cluster叢集部署、主從複製、哨兵模式_資料庫_程式人生](https://www.796t.com/article.php?id=192567)

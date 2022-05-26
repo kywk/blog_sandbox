@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
-title: Awesome
-tags: ["aewsome", "SRE"]
+title: Awesome Resources
+tags: [SRE, awesome]
 ---
 
 # Awesome SRE Resources #

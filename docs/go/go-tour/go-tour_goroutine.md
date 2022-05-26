@@ -1,18 +1,21 @@
 ---
-title: "Tour: Goroutine"
-tags: ["Go", "go-tour"]
+title: "Goroutine"
+tags: [Go, go-tour]
 
 date: 2022-04-20T15:45:04+08:00
-images: ["https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"]
-categories: ["go"]
+image: "https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"
+categories: [go]
 ---
 
-# [Go] Tour: Goroutine 心得筆記 #
+[Go] Tour: Goroutine 心得筆記
+============================
 
 _本篇大多參考於 [Go 的並發：Goroutine 與 Channel 介紹 - Limitless Ping](https://peterhpchen.github.io/2020/03/08/goroutine-and-channel.html),
 加上一些個人理解與整理. 強烈建議參閱原文, 圖文並茂, 敘事條理分明的好文章._
 
-## Threading ##
+
+Threading
+---------
 
 先來了解執行緒.  
 單執行緒情況下, 程式碼會依序執行.
@@ -82,7 +85,8 @@ spent 500 ms
 `say("world")` 會在另一個執行緒 (Goroutine) 上, 和 `main` 程序同時執行.
 
 
-## Goroutine 介紹 ##
+Goroutine 介紹
+--------------
 
 Goroutine 類似 golang 的 thread, 讓 Go 可以多工處理, 
 main function 本身就是一個 Goroutine, 
@@ -96,7 +100,8 @@ go f(x, y, z)
 ```
 
 
-## LifeCycle ##
+LifeCycle
+---------
 
 在 golang 中, 當 main Goroutine 結束後, 其他 Goroutine 都會強制結束.
 因此 Goroutine 生命週期從被建立時開始, 到函式執行結束返回或 main Goroutine 結束時一起結束.
@@ -134,7 +139,8 @@ main Goroutune 僅需花費 200ms, 少於其他兩個 `say` Goroutine,
 除非程式執行時間有所限制, 否則用 `time.Sleep` 來等候 Goroutine 並非好方法.
 
 
-## 等候 Goroutine ##
+等候 Goroutine
+--------------
 
 若程式必須等候所有 Goroutine 執行完畢, 透過 sleep 等候是不可靠的. 
 Go 裡面的常見等候方式有 `sync.WaitGroup` 或 `channel`.
@@ -209,7 +215,8 @@ Channel 阻塞的方法為 Go 語言中等待的主要方式.
 若傳入的 Channel 會拿來溝通訊息, 同時也當作阻塞等待的話, 需要注意傳回值的判斷等.
 
 
-## 共享變數 ##
+共享變數
+-------
 
 多執行緒下使用相同變數時, 要特別注意競爭問題.
 
@@ -302,7 +309,8 @@ Channel 阻塞的特性, 搭配 Goroutine 可以用來作流程管控等功能.
 但 Channel 還有其他特性, 拿 Channel 當作溝通資料之外的用途時, 仍需特別注意.
 
 
-## 小結 ##
+小結
+----
 
 善用 Goroutine 多執行緒特性可以避免等候, 增進程式效率.
 需要等候的時機, 也可用 `time.Sleep`, `sync.WaitGroup` 或 Channel 的方式處理. 

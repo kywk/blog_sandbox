@@ -1,10 +1,10 @@
 ---
 title: "Redis: 警告與問題排除"
-tags: ["SRE", "redis"]
+tags: [SRE, redis]
 
 date: 2021-05-06T14:26:31+08:00
-images: ["https://lh3.googleusercontent.com/pw/ACtC-3c20fracgrQ2pPqoqdoDC8B2-TKXBr7gWPBBoYkEjUhibsZSiOx-D0rbH0mw4ioWUPFaggeqZhKvWI-og9IzKmSXItl67QFCpd33vklw9QLZU0FW7ggHE1yuZ7S7NVTUSmrshARmmk-iJQifd72Nb86rQ=w800-no?authuser=0"]
-categories: ["SRE"]
+image: "https://lh3.googleusercontent.com/pw/ACtC-3c20fracgrQ2pPqoqdoDC8B2-TKXBr7gWPBBoYkEjUhibsZSiOx-D0rbH0mw4ioWUPFaggeqZhKvWI-og9IzKmSXItl67QFCpd33vklw9QLZU0FW7ggHE1yuZ7S7NVTUSmrshARmmk-iJQifd72Nb86rQ=w800-no?authuser=0"
+categories: [SRE]
 ---
 
 [Redis] 警告訊息排除
@@ -45,7 +45,8 @@ cow@sandbox:~/tmp/redis/src# ./redis-server
 ```
 
 
-### 同時開啟檔案數量太少 ###
+同時開啟檔案數量太少
+----------------
 
 ``` txt
 Increased maximum number of open files to 10032 (it was originally set to 1024).
@@ -70,7 +71,8 @@ fs.file-max = 10032
 可參考 [Redis 启动警告解决方法 - 简书](https://www.jianshu.com/p/0048af19a8cb)
 
 
-### TCP backlog setting fail ###
+TCP backlog setting fail
+------------------------
 
 ``` txt
 WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
@@ -88,7 +90,8 @@ net.core.somaxconn=65535
 ```
 
 
-### overcommit_memory = 0 ###
+overcommit_memory = 0
+---------------------
 
 ``` txt
 WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
@@ -106,7 +109,8 @@ vm.overcommit_memory=1
 ```
 
 
-### Transparent Huge Pages enabled  ###
+Transparent Huge Pages enabled
+------------------------------
 
 ``` txt
 WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
@@ -131,7 +135,8 @@ $ sudo chmod a+x /etc/rc.local
 ```
 
 
-### See Also ###
+See Also
+--------
 
 全部修改完後重新開機後, redis 就不會出現相關 WARNING 了.
 若系統不方便重新開機, 下列兩個參考資訊都有可以即時生效的設定方式.

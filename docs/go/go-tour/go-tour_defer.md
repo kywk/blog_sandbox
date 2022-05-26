@@ -1,13 +1,14 @@
 ---
-title: "Tour: defar"
-tags: ["Go", "go-tour"]
+title: "defar"
+tags: [Go, go-tour]
 
 date: 2022-04-11T20:08:41+08:00
-images: ["https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"]
+image: "https://lh3.googleusercontent.com/pw/AM-JKLWu8wVpy5iA1V-YEeQHafjhEuZiS8kFPaPu0pj_m6yi09YtCsVYFT8Z6LxtDL57sWDXa8rRZm6B_OsIhWjgBWupJ1ZopYhtDR5PMn-4q8ypuliQvh5KDBfdZmKAxOkIXb4FhRvkuQsRhKiyjB02tR6otw=w860-h480-no?authuser=0s"
 categories: ["go"]
 ---
 
-# [Go] Tour: defar 心得筆記 #
+[Go] Tour: defar 心得筆記
+========================
 
 defer 是 golang 的一個特色功能, 在 A Tour of Go 裡的說明如下:
 
@@ -19,7 +20,8 @@ defer 是 golang 的一個特色功能, 在 A Tour of Go 裡的說明如下:
 仔細了解後才發現 defer 的一些特性, 使用上該多注意.
 
 
-## 執行順序 ##
+執行順序
+-------
 
 ### defer 生效順序 ###
 
@@ -194,7 +196,9 @@ func main() {
 }
 ```
 
-## 常見使用場景 ##
+
+常見使用場景
+----------
 
 ### 釋放占用的資源 ###
 
@@ -249,7 +253,8 @@ func test3() {
 ```
 
 
-## 常見錯誤 ##
+常見錯誤
+-------
 
 ``` go
 func test4() error {
@@ -273,7 +278,8 @@ func test4() error {
 ```
 
 
-## See Also ##
+See Also
+--------
 
 -   [Defer, Panic, and Recover - The Go Blog](https://go.dev/blog/defer-panic-and-recover)
 -   [Golang 的defer執行規則說明 - WalkonNet](https://walkonnet.com/archives/56570)

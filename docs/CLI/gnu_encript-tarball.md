@@ -1,9 +1,9 @@
 ---
 title: "GNU: Tar 加密打包"
-tags: ["CLI", "GNU"]
+tags: [CLI, GNU]
 
 date: 2020-12-10T17:31:07+08:00
-categories: ["cli"]
+categories: [cli]
 ---
 
 [GNU] Tarball 加密打包
@@ -21,7 +21,9 @@ TarBall
 Tar 支援 gzip, bz2, xz... 等多種壓縮方式, 但 tar 並不支援加密.
 在命令列模式下要加密 tarball, 需透過其他指令來完成, 最常用的是 openssl.
 
-### 加密 ###
+
+加密
+---
 
 簡單指令如下: (僅加密打包不壓縮)
 ``` shell
@@ -43,7 +45,9 @@ $ tar cvf - FILE_NAME | openssl des3 -salt -k passw0rd -out /path/to/file.tar
 -   k 指定的密碼
 -   out 輸出文件名字
 
-### 解密 ###
+
+解密
+---
 
 ``` shell
 $ openssl des3 -d -k passw0rd -salt -in /path/to/file.tar.gz | tar xvf -
@@ -51,7 +55,9 @@ $ openssl des3 -d -k passw0rd -salt -in /path/to/file.tar.gz | tar xvf -
 
 這指令剛好把加密打包的行為反過來. 先透過 openssl 把檔案解密後, 再利用 tar 解開 tarball 內容.
 
-### alias ###
+
+alias
+-----
 
 整理資料時需大量的打包檔案, 未避免輸入時手誤打錯密碼, 
 直接在 bashrc 中新增加密和解密的 alias, 把密碼固定寫在 alias 中, 
@@ -71,8 +77,6 @@ $ des -in FILE_NAME.tar.x | tar xvf -
 
 See Also
 --------
-
-### Reference ###
 
 - [GNU / Linux 各種壓縮與解壓縮指令 | 凍仁的筆記](http://note.drx.tw/2008/04/command.html)
 - [tar命令加密壓縮 - IT閱讀](https://www.itread01.com/content/1551377067.html)
