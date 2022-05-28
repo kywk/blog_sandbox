@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[7359],{5519:function(e){e.exports=JSON.parse('{"label":"TypeScript","permalink":"/moco/docs/tags/type-script","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"typescript/awesome","title":"Awesome Resources","description":"","permalink":"/moco/docs/typescript/awesome"}]}')}}]);
