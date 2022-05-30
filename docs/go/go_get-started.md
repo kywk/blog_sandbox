@@ -1,5 +1,6 @@
 ---
-title: "Getting Start"
+title: "Get Started"
+sidebar_position: 1
 tags: [Go, novice]
 
 date: 2022-05-25
@@ -16,7 +17,7 @@ import TabItem from '@theme/TabItem';
 Get started
 -----------
 
-### Write some code ###
+### Helo World ###
 
 ``` Go
 // hello.go
