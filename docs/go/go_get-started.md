@@ -137,7 +137,12 @@ IDE Setting
 See Also
 --------
 
+### Get Started ###
+
 -   [Tutorial: Get started with Go - The Go Programming Language](https://go.dev/doc/tutorial/getting-started)
+
+### Module ###
+
 -   [Go語言重新開始，Go Modules 的前世今生與基本使用 | IT人](https://iter01.com/638052.html)
 -   [go modules 終於不會再被GOPATH綁死了 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10217414)
 -   [【Golang】還在把 library 放在專案裡？該跟上使用 Go Module 了！ | by Zam Huang | Medium](https://zamhuang.medium.com/4185df23442a)
