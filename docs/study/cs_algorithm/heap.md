@@ -1,5 +1,5 @@
 ---
-title: "Binary Heap"
+title: "[DS] Binary Heap"
 tags: [study, algorithm, cs, leetcode]
 
 date: 2022-05-26
@@ -9,8 +9,8 @@ categories: [algorithm]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Binary (Max) Heap
-=================
+[DS] Binary (Max) Heap
+======================
 
 > Binary Max Heap property: The parent of each vertex - except the root - contains value greater than the value of that vertex. This is an easier-to-verify definition than the following alternative definition: The value of a vertex - except the leaf/leaves - must be greater than the value of its one (or two) child(ren).
 > 

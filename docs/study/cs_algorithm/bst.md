@@ -1,5 +1,5 @@
 ---
-title: "Binary Search Tree"
+title: "[DS] Binary Search Tree"
 tags: [study, algorithm, cs, leetcode]
 
 date: 2022-05-30
@@ -9,8 +9,8 @@ categories: [algorithm]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Binary Search Tree
-==================
+[DS] Binary Search Tree
+=======================
 
 Binary Search Tree 基本概念是每一個節點最多有左右各一個子節點, 
 左子節點的值小於自身節點的值, 右子節點則大於本身.
@@ -65,6 +65,96 @@ struct node {
 
 兩者各有優缺點, 依實務需求決定. 本篇選用不包括父連結的結構. 
 
+<Tabs>
+  <TabItem value="go" label="Go" default>
+
+``` go
+type IBSTNode interface {
+  search(int) bool
+  insert(int)
+  remove(int) IBSTNode
+  findMin() int
+  findMax() int
+  findPredecessor(int) int
+  findSuccessor(int) int
+  inorder(*[]int)
+}
+
+type BST struct {
+  root IBSTNode
+}
+
+type BSTNode struct {
+  value int
+  left  *BSTNode
+  right *BSTNode
+}
+```
+  </TabItem>
+  <TabItem value="js" label="JavaScript">
+
+``` js
+class BST {
+  constructor(data) {
+    this.root = null
+    if (typeof(data) === 'number') {
+      this.root = new BSTNode(data)
+    } else if (Array.isArray(data)) {
+      this.root = new BSTNode(data[0])
+      for (let i = 1; i < data.length; i++)
+        this.insert(data[i])
+    }
+  }
+}
+
+class BSTNode {
+  constructor(data) {
+    this.value = data
+    this.left = null
+    this.right = null
+  }
+}
+```
+  </TabItem>
+  <TabItem value="ts" label="TypeScript">
+
+``` ts
+export class BST {
+  root: BSTNode | null
+
+  constructor(data: number | Array<number> | null) {
+    this.root = null
+    if (typeof(data) === 'number') {
+      this.root = new BSTNode(data)
+    } else if (Array.isArray(data)) {
+      this.root = new BSTNode(data[0])
+      for (let i = 1; i < data.length; i++)
+        this.insert(data[i])
+    }
+  }
+}
+
+type IBSTNode = BSTNode | null
+export class BSTNode {
+  value: number
+  left: IBSTNode
+  right: IBSTNode
+
+  constructor(data: number) {
+    this.value = data
+    this.left = null
+    this.right = null
+  }
+}
+```
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+``` python
+```
+  </TabItem>
+</Tabs>
+
 
 
 ADT Basic Operate
@@ -87,22 +177,42 @@ as efficient as possible:
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) search(v int) bool {
-    if n == nil { return false }
-    if n.value == v { return true }
-    if n.value > v { return n.left.search(v)} 
-    else { return n.right.search(v)}
+func (n *BSTNode) search(val int) bool {
+  if n == nil { return false }
+  if n.value > val {
+    return n.left.search(val)
+  } else if n.value < val {
+    return n.right.search(val)
+  } else {
+    return true
+  }
 }
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  search(val) {
+    if (this.value === val)
+      return true
+    if (this.value > val)
+      return this.left === null ? false : this.left.search(val)
+    else
+      return this.right === null ? false : this.right.search(val)
+  }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  public search(val: number): boolean {
+    if (this.value === val)
+      return true
+    if (this.value > val)
+      return this.left === null ? false : this.left.search(val)
+    else
+      return this.right === null ? false : this.right.search(val)
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -118,30 +228,57 @@ func (n *Node) search(v int) bool {
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) insert(v int) {
-    if n.value <= 0 {
-        n.value = v
-        return
-    }
-
-    if n.value > v {
-        if n.left != nil { n.left.insert(v) } 
-        else { n.left = &Node{v, nil, nil} }
+func (n *BSTNode) insert(val int) {
+  if val < n.value {
+    if n.left == nil {
+      n.left = newBSTNode(val)
     } else {
-        if n.right != nil { n.right.insert(v) } 
-        else { n.right = &Node{v, nil, nil} }
+      n.left.insert(val)
     }
+  } else {
+    if n.right == nil {
+      n.right = newBSTNode(val)
+    } else {
+      n.right.insert(val)
+    }
+  }
 }
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  insert(val) {
+    if (val < this.value) {
+      if (this.left === null)
+        this.left = new BSTNode(val)
+      else
+        this.left.insert(val)
+    } else {
+      if (this.right === null)
+        this.right = new BSTNode(val)
+      else
+        this.right.insert(val)
+    }
+  }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  public insert(val: number) {
+    if (val < this.value) {
+      if (this.left === null)
+        this.left = new BSTNode(val)
+      else
+        this.left.insert(val)
+    } else {
+      if (this.right === null)
+        this.right = new BSTNode(val)
+      else
+        this.right.insert(val)
+    }
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -157,36 +294,121 @@ func (n *Node) insert(v int) {
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) doRemove(v int) *Node {
-    if n == nil { return nil }
-    if n.value > v {
-        n.left = n.left.doRemove(v)
-        return n
-    }
-    if n.value < v {
-        n.right = n.right.doRemove(v)
-        return n
-    }
-    // n.value = v
-    if n.left == nil && n.right == nil { return nil }
-    if n.left == nil { return n.right }
-    if n.right == nil { return n.left }
-
-    successor := n.right.findMaxNode()
-    n.value, successor.value = successor.value, n.value
-    n.right = n.right.doRemove(v)
-    return n
+func (bst *BST) Remove(val int) {
+  if bst.root == nil { return }
+  bst.root = bst.root.remove(val)
 }
+
+func (n *BSTNode) remove(val int) IBSTNode {
+  return n.removeHelper(val)
+}
+
+func (n *BSTNode) removeHelper(val int) *BSTNode {
+  if n == nil { return nil }
+
+  if n.value > val {
+    n.left = n.left.removeHelper(val)
+  } else if n.value < val {
+    n.right = n.right.removeHelper(val)
+  } else {
+    if n.left != nil && n.right != nil {
+      successor := n.right.findMin()
+      n.value = successor
+      n.right = n.right.removeHelper(successor)
+    } else if n.left != nil {
+      n = n.left
+    } else if n.right != nil {
+      n = n.right
+    } else {
+      return nil
+    }
+  }
+  return n
+}
+
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  // Class BST
+  remove(val) {
+    if (this.root === null) return
+    this.root = this.root.remove(val)
+  }
+
+  // Class BSTNode
+  remove(val) {
+    return BSTNode._removeHelper(val, this)
+  }
+
+  static _removeHelper(val, currentNode) {
+    if (currentNode === null) return null
+
+    let result
+    if (val < currentNode.value) {
+      currentNode.left = BSTNode._removeHelper(val, currentNode.left)
+      result = currentNode
+    } else if (currentNode.value < val) {
+      currentNode.right = BSTNode._removeHelper(val, currentNode.right)
+      result = currentNode
+    } else {
+      if ((currentNode.left === null) && (currentNode.right === null))
+        return null
+      else if (currentNode.left === null)
+        result = currentNode.right
+      else if (currentNode.right === null)
+        result = currentNode.left
+      else {
+        let successor = currentNode.right.findMin()
+        currentNode.value = successor
+        currentNode.right = BSTNode._removeHelper(successor, currentNode.right)
+        result = currentNode
+      }
+    }
+    return result
+  }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  // Class BST
+  remove(val: number) {
+    if (this.root === null) return
+    this.root = this.root.remove(val)
+  }
+
+  // Class BSTNode
+  public remove(val: number): BSTNode | null {
+    return BSTNode.removeHelper(val, this)
+  }
+  static removeHelper(val: number, currentNode: IBSTNode): IBSTNode {
+    if (currentNode === null) return null
+
+    let result
+    if (val < currentNode.value) {
+      currentNode.left = BSTNode.removeHelper(val, currentNode.left)
+      result = currentNode
+    } else if (currentNode.value < val) {
+      currentNode.right = BSTNode.removeHelper(val, currentNode.right)
+      result = currentNode
+    } else {
+      if ((currentNode.left === null) && (currentNode.right === null))
+        return null
+      else if (currentNode.left === null)
+        result = currentNode.right
+      else if (currentNode.right === null)
+        result = currentNode.left
+      else {
+        let successor = currentNode.right.findMin()
+        currentNode.value = successor
+        currentNode.right = BSTNode.removeHelper(successor, currentNode.right)
+        result = currentNode
+      }
+    }
+    return result
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -207,27 +429,39 @@ Find & Travsal
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) findMin() int {
-    if n == nil { return -1 }
-    if n.left == nil { return n.value }
-    return n.left.findMin()
+func (n *BSTNode) findMin() int {
+  if n.left == nil { return n.value } 
+  else { return n.left.findMin() }
 }
 
-func (n *Node) findMax() int {
-    if n == nil { return -1 }
-    if n.right == nil { return n.value }
-    return n.right.findMax()
+func (n *BSTNode) findMax() int {
+  if n.right == nil { return n.value } 
+  else { return n.right.findMax() }
 }
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  findMin() {
+    return this.left === null ?  this.value : this.left.findMin()
+  }
+
+  findMax() {
+    return this.right === null ? this.value : this.right.findMax()
+  }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  public findMin(): number {
+    return this.left === null ?  this.value : this.left.findMin()
+  }
+
+  public findMax(): number {
+    return this.right === null ? this.value : this.right.findMax()
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -243,31 +477,69 @@ func (n *Node) findMax() int {
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) findPredecessor(v int) int {
-    predecessor := -1
-    for n != nil && n.value != v {
-        if n.value < v {
-            predecessor = n.value
-            n = n.right
-        } else {
-            n = n.left
-        }
-    }
-
-    if n == nil { return -1 }
-    if n.left != nil { return n.left.findMax() } 
-    else { return predecessor }
+func (n *BSTNode) findPredecessor(val int) int {
+  predecessor := NOTFOUND
+  node := n
+  for node != nil && node.value != val {
+    if node.value < val {
+      predecessor = node.value
+      node = node.right
+    } else { node = node.left }
+  }
+  if node == nil { return NOTFOUND }
+  if node.left != nil { return node.left.findMax() } 
+  else { return predecessor }
 }
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  findPredecessor(val) {
+    let predecessor = NOT_FOUND
+    let node = this
+    while ((node !== null) && (node.value !== val)) {
+      if (node.value < val) {
+        predecessor = node.value
+        node = node.right
+      } else 
+        node = node.left
+    }
+    if (node === null)
+      return NOT_FOUND
+    if (node.left !== null)
+      return node.left.findMax()
+    else
+      return predecessor
+  }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  public findPredecessor(val: number): number{
+    return BSTNode.findPredecessor(val, this)
+  }
+
+  static findPredecessor(val: number, currentNode: IBSTNode): number {
+    let predecessor = NOT_FOUND
+    let node = currentNode
+    while ((node !== null) && (node.value !== val)) {
+      if (node.value < val) {
+        predecessor = node.value
+        node = node.right
+      } else {
+        node = node.left
+      }
+    }
+
+    if (node === null)
+      return NOT_FOUND
+    if (node.left !== null)
+      return node.left.findMax()
+    else
+      return predecessor
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -283,31 +555,70 @@ func (n *Node) findPredecessor(v int) int {
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) findSuccessor(v int) int {
-    successor := -1
-    for n != nil && n.value != v {
-        if n.value > v {
-            successor = n.value
-            n = n.left
-        } else {
-            n = n.right
-        }
-    }
-
-    if n == nil { return -1 }
-    if n.right != nil { return n.right.findMin() } 
-    else { return successor }
+func (n *BSTNode) findSuccessor(val int) int {
+  successor := NOTFOUND
+  node := n
+  for node != nil && node.value != val {
+    if node.value > val {
+      successor = node.value
+      node = node.left
+    } else { node = node.right }
+  }
+  if node == nil { return NOTFOUND }
+  if node.right != nil { return node.right.findMin() } 
+  else { return successor }
 }
+
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  findSuccessor(val) {
+    let successor = NOT_FOUND
+    let node = this
+    while ((node !== null) && (node.value !== val)) {
+      if (node.value > val) {
+        successor = node.value
+        node = node.left
+      } else 
+        node = node.right
+    }
+    if (node === null)
+      return NOT_FOUND
+    if (node.right !== null)
+      return node.right.findMin()
+    else
+      return successor
+  }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  public findSuccessor(val: number): number{
+    return BSTNode.findSuccessor(val, this)
+  }
+
+  static findSuccessor(val: number, currentNode: IBSTNode): number {
+    let successor = NOT_FOUND
+    let node = currentNode
+    while ((node !== null) && (node.value !== val)) {
+      if (node.value > val) {
+        successor = node.value
+        node = node.left
+      } else {
+        node = node.right
+      }
+    }
+
+    if (node === null)
+      return NOT_FOUND
+    if (node.right !== null)
+      return node.right.findMin()
+    else
+      return successor
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -317,7 +628,16 @@ func (n *Node) findSuccessor(v int) int {
   </TabItem>
 </Tabs>
 
-### Inorder Traversal ###
+
+
+Traversal
+---------
+
+### Deep First Traversal ###
+
+... TBD...
+
+### Inorder ###
 
 An Inorder Traversal of this BST to obtain a list of sorted 
 integers inside this BST.
@@ -331,154 +651,47 @@ all items in the right subtree.
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *Node) inorder(nums *[]int) {
-    if n == nil { return }
-    n.left.inorder(nums)
-    *nums = append(*nums, n.value)
-    n.right.inorder(nums)
+func (bst *BST) Inorder() []int {
+  if bst.root == nil { return nil }
+  result := make([]int, 0)
+  bst.root.inorder(&result)
+  return result
+}
+
+func (n *BSTNode) inorder(buf *[]int) {
+  if n == nil { return }
+  n.left.inorder(buf)
+  *buf = append(*buf, n.value)
+  n.right.inorder(buf)
 }
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
-```
-  </TabItem>
-  <TabItem value="ts" label="TypeScript">
-
-``` ts
-```
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-``` python
-```
-  </TabItem>
-</Tabs>
-
-
-AVL Tree
---------
-
-A balanced BST is a BST that h = O(log N).
-AVL Tree (Adelson-Velskii & Landis, 1962) that is named after its 
-inventor: Adelson-Velskii and Landis.
-
-### height(v) ###
-
-__height(v)__: The number of edges on the path from vertex v down to 
-its deepest leaf. This attribute is saved in each vertex so we can 
-access a vertex's height in __O(1)__ without having to recompute it 
-every time.
-
-``` js
-v.height = -1 (if v is an empty tree)
-v.height = max(v.left.height, v.right.height) + 1 (otherwise)
-
-// Balance Factor
-v.bf = v.left.height - v.right.height
-````
-
-### rotate Left/Right ###
-
-<Tabs>
-  <TabItem value="go" label="Go" default>
-
-``` go
-func (avl *AVLNode) rotateLeft() *AVLNode {
-    result := avl.right
-    t := result.left
-    avl.right = t
-    avl.height--
-    result.left = avl
-    result.height++
+  inorder() {
+    let result = []
+    if (this.left !== null)
+      result = result.concat(this.left.inorder())
+    result.push(this.value)
+    if (this.right !== null)
+      result = result.concat(this.right.inorder())
     return result
-}
+  }
+```
+  </TabItem>
+  <TabItem value="ts" label="TypeScript">
 
-func (avl *AVLNode) rotateRight() *AVLNode {
-    result := avl.left
-    t := result.right
-    avl.left = t
-    avl.height--
-    result.right = avl
-    result.height++
+``` ts
+  public inorder(): Array<number> {
+    let result: Array<number> = new Array()
+    if (this.left !== null)
+      result = result.concat(this.left.inorder())
+    result.push(this.value)
+    if (this.right !== null)
+      result = result.concat(this.right.inorder())
     return result
-}
-```
-  </TabItem>
-  <TabItem value="js" label="JavaScript">
-
-``` js
-```
-  </TabItem>
-  <TabItem value="ts" label="TypeScript">
-
-``` ts
-```
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-``` python
-```
-  </TabItem>
-</Tabs>
-
-### insert() ###
-
-```text
-insert v
-check balance factor of this and its children
-  case1: this.rotateRight
-  case2: this.left.rotateLeft, this.rotateRight
-  case3: this.rotateLeft
-  case4: this.right.rotateRight, this.rotateLeft
-  this is balanced
-```
-
-<Tabs>
-  <TabItem value="go" label="Go" default>
-
-``` go
-func (avl *AVLNode) insert(v int) {
-    if avl.value <= 0 {
-        avl.value = v
-        return
-    }
-    if avl.value > v { avl.left = avl.left.doInsert(v) } 
-    else { avl.right = avl.right.doInsert(v) }
-}
-
-func (avl *AVLNode) doInsert(v int) *AVLNode {
-    if avl == nil { return newAVLNode(v) }
-    if avl.value > v { avl.left = avl.left.doInsert(v) } 
-    else { avl.right = avl.right.doInsert(v) }
-    return avl.rotateInsert(v)
-}
-
-func (avl *AVLNode) rotateInsert(v int) *AVLNode {
-    avl.updateHeight()
-    bf := avl.balanceFactor()
-
-    if bf > 1 {
-        if v > avl.left.value { avl.left = avl.left.rotateLeft() }
-        return avl.rotateRight()
-    } else if bf < -1 {
-        if v < avl.right.value { avl.right = avl.right.rotateRight() }
-        return avl.rotateLeft()
-    } else {
-        return avl
-    }
-}
-```
-  </TabItem>
-  <TabItem value="js" label="JavaScript">
-
-``` js
-```
-  </TabItem>
-  <TabItem value="ts" label="TypeScript">
-
-``` ts
+  }
 ```
   </TabItem>
   <TabItem value="python" label="Python">
@@ -493,33 +706,14 @@ func (avl *AVLNode) rotateInsert(v int) *AVLNode {
 小結
 ---
 
-[Binary Heap](heap.md) 一些特性適合練習與解釋 Class 中的 private / public / class method.
-而 BST / AVL Tree 則很適合 OOP 中的繼承和封裝概念. 
-
-AVL Tree 亦是一種 BST, 所有對 BST 的操作都適用於 AVL Tree.
-適合類別界面封裝概念. 操作時無須考慮是由那一種 Tree 實作, 透過類別封裝界面操作即可. 
-
-另一點則是實作上 AVL Tree 中許多函式都可以直接沿用 BST 界面, 
-適合用繼承已利程式重複使用與維護.
-
-這邊以各語言中原生或模擬繼承的方式實作 AVL 對 BST 的繼承.
-
-而限於 Golang 的特性, 繼承和 Overriding 會讓程式變得過於複雜, 
-反倒失去 Golang keep in simple 哲學, 僅用 interface 來封裝 AVL Tree Node.
+和 [Binary Heap](heap.md) 相比, BST 中程式遞迴可能會修改到物件本身.
+呼叫和回傳的物件處理上需要比較注意.
 
 
 
 See Also
 --------
 
-### BST ###
-
 -   [Binary Search Tree, AVL Tree - VisuAlgo](https://visualgo.net/en/bst)
 -   [Binary Search Trees in Go. Introduction | by Puneeth S | Level Up Coding](https://levelup.gitconnected.com/58f9126eb36b)
-
-### Inheritance 繼承 ###
-
--   Golang
-    -   [[Golang] 程式設計教學：用介面 (Interface) 實踐繼承和多型 | 開源技術教學網](https://opensourcedoc.com/golang-programming/interface/)
-    -   [秒懂 go 语言的继承 | Go 技术论坛](https://learnku.com/articles/32295)  
-    -   [Golang OOP、繼承、組合、介面_Go語言中文網 - MdEditor](https://www.gushiciku.cn/pl/2txm/zh-tw)
+-   [用 JavaScript 實作二元搜尋樹（Binary Search Tree） | Arsene's Alibi](https://arsenekuo.com/post/2021/12/13/implementation-of-bst-in-javascript)

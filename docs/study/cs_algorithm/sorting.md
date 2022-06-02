@@ -1,5 +1,5 @@
 ---
-title: Sorting
+title: "[ALGO] Sorting"
 tags: [study, algorithm, cs, leetcode]
 
 date: 2022-05-26
@@ -9,8 +9,10 @@ categories: [algorithm]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Sorting (Bubble, Selection, Insertion, Merge, Quick, Counting, Radix) - VisuAlgo](https://visualgo.net/en/sorting)
+[ALGO] Sorting
+==============
 
+[Sorting (Bubble, Selection, Insertion, Merge, Quick, Counting, Radix) - VisuAlgo](https://visualgo.net/en/sorting)
 
 Bubble
 ------
