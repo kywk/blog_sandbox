@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[8988],{3606:function(o){o.exports=JSON.parse('{"title":"52 Projects","description":"52 Projects","slug":"/category/52-projects","permalink":"/moco/docs/category/52-projects","navigation":{"next":{"title":"52 Projects","permalink":"/moco/docs/52projects/"}}}')}}]);
