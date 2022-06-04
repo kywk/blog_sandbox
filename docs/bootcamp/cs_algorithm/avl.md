@@ -1,6 +1,6 @@
 ---
 title: "[DS] AVL Tree"
-tags: [study, algorithm, cs, leetcode]
+tags: [bootcamp, algorithm, cs, leetcode]
 
 date: 2022-06-02
 categories: [algorithm]
@@ -18,6 +18,93 @@ AVL Tree
 A balanced BST is a BST that h = O(log N).
 AVL Tree (Adelson-Velskii & Landis, 1962) that is named after its 
 inventor: Adelson-Velskii and Landis.
+
+<Tabs>
+  <TabItem value="go" label="Go" default>
+
+``` go
+type AVLNode struct {
+  value  int
+  height int
+  left   *AVLNode
+  right  *AVLNode
+}
+
+func newAVLNode(v int) *AVLNode {
+  return &AVLNode{
+    value:  v,
+    height: 1,
+    left:   nil,
+    right:  nil,
+  }
+}
+```
+  </TabItem>
+  <TabItem value="js" label="JavaScript">
+
+``` js
+class AVL extends BST {
+  constructor(data) {
+    super()
+    this.root = null
+    if (typeof(data) === 'number') {
+      this.root = new AVLNode(data)
+    } else if (Array.isArray(data)) {
+      this.root = new AVLNode(data[0])
+      for (let i = 1; i < data.length; i++)
+        this.insert(data[i])
+    }
+  }
+}
+
+class AVLNode extends BSTNode {
+  constructor(data) {
+    super()
+    this.value = data
+    this.left = null
+    this.right = null
+    this.height = 1
+  }
+}
+```
+  </TabItem>
+  <TabItem value="ts" label="TypeScript">
+
+``` ts
+export class AVL extends BST {
+  constructor(data: number | Array<number>) {
+    super(null)
+    this.root = null
+    if (typeof (data) === 'number') {
+      this.root = new AVLNode(data)
+    } else if (Array.isArray(data)) {
+      this.root = new AVLNode(data[0])
+      for (let i = 1; i < data.length; i++)
+        this.insert(data[i])
+    }
+  }
+}
+
+export class AVLNode extends BSTNode {
+  left: IAVLNode
+  right: IAVLNode
+  height: number
+
+  constructor(data: number) {
+    super(data)
+    this.left = null
+    this.right = null
+    this.height = 1
+  }
+}
+```
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+``` python
+```
+  </TabItem>
+</Tabs>
 
 ### height(v) ###
 
@@ -52,7 +139,6 @@ check balance factor of this and its children
 
 ``` go
 func (n *AVLNode) rotate() *AVLNode {
-  n.updateHeight()
   left := n.left.getHeight()
   right := n.right.getHeight()
   bf := left - right
@@ -68,6 +154,7 @@ func (n *AVLNode) rotate() *AVLNode {
     }
     return n.rotateLeft()
   } else {
+    n.updateHeight()
     return n
   }
 }
@@ -76,23 +163,23 @@ func (n *AVLNode) rotate() *AVLNode {
   <TabItem value="js" label="JavaScript">
 
 ``` js
-  // Class AVLNode
-  static _rotate(currentNode) {
-    currentNode._updateHeight()
-    let left = AVLNode._heightHelper(currentNode.left)
-    let right = AVLNode._heightHelper(currentNode.right)
+  // class AVLNode
+  static _rotate(node) {
+    let left = AVLNode._heightHelper(node.left)
+    let right = AVLNode._heightHelper(node.right)
     let bf = left - right
 
     if (bf > 1) {
-      if (AVLNode._heightHelper(currentNode.left.left) < AVLNode._heightHelper(currentNode.left.right))
-        currentNode.left = AVLNode._rotateLeft(currentNode.left)
-      return AVLNode._rotateRight(currentNode)
+      if (AVLNode._heightHelper(node.left.left) < AVLNode._heightHelper(node.left.right))
+        node.left = AVLNode._rotateLeft(node.left)
+      return AVLNode._rotateRight(node)
     } else if (bf < -1) {
-      if (AVLNode._heightHelper(currentNode.right.left) > AVLNode._heightHelper(currentNode.right.right))
-        currentNode.right = AVLNode._rotateRight(currentNode.right)
-      return AVLNode._rotateLeft(currentNode)
+      if (AVLNode._heightHelper(node.right.left) > AVLNode._heightHelper(node.right.right))
+        node.right = AVLNode._rotateRight(node.right)
+      return AVLNode._rotateLeft(node)
     } else {
-      return currentNode
+      node._updateHeight()
+      return node
     }
   }
 ```
@@ -100,22 +187,22 @@ func (n *AVLNode) rotate() *AVLNode {
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
-  static rotate(currentNode: IAVLNode): IAVLNode {
-    currentNode!.updateHeight()
-    let left = AVLNode.heightHelper(currentNode!.left)
-    let right = AVLNode.heightHelper(currentNode!.right)
+  static rotate(node: IAVLNode): IAVLNode {
+    let left = AVLNode.heightHelper(node!.left)
+    let right = AVLNode.heightHelper(node!.right)
     let bf = left - right
 
     if (bf > 1) {
-      if (AVLNode.heightHelper(currentNode!.left!.left) < AVLNode.heightHelper(currentNode!.left!.right))
-        currentNode!.left = AVLNode.rotateLeft(currentNode!.left)
-      return AVLNode.rotateRight(currentNode)
+      if (AVLNode.heightHelper(node!.left!.left) < AVLNode.heightHelper(node!.left!.right))
+        node!.left = AVLNode.rotateLeft(node!.left)
+      return AVLNode.rotateRight(node)
     } else if (bf < -1) {
-      if (AVLNode.heightHelper(currentNode!.right!.left) > AVLNode.heightHelper(currentNode!.right!.right))
-        currentNode!.right = AVLNode.rotateRight(currentNode!.right)
-      return AVLNode.rotateLeft(currentNode)
+      if (AVLNode.heightHelper(node!.right!.left) > AVLNode.heightHelper(node!.right!.right))
+        node!.right = AVLNode.rotateRight(node!.right)
+      return AVLNode.rotateLeft(node)
     } else {
-      return currentNode
+      node!.updateHeight()
+      return node
     }
   }
 ```
@@ -136,20 +223,22 @@ func (n *AVLNode) rotate() *AVLNode {
 func (n *AVLNode) rotateLeft() *AVLNode {
   result := n.right
   t := result.left
+
   n.right = t
   n.height--
+
   result.left = n
-  result.height++
   return result
 }
 
 func (n *AVLNode) rotateRight() *AVLNode {
   result := n.left
   t := result.right
+
   n.left = t
   n.height--
+
   result.right = n
-  result.height++
   return result
 }
 ```
@@ -157,24 +246,26 @@ func (n *AVLNode) rotateRight() *AVLNode {
   <TabItem value="js" label="JavaScript">
 
 ``` js
-  // Class AVL
-  static _rotateRight(currentNode) {
-    let result = currentNode.left
-    let t = result.right
-    currentNode.left = t
-    currentNode.height--
-    result.right = currentNode
-    result.height++
+  // class AVLNode
+  static _rotateLeft(node) {
+    let result = node.right
+    let t = result.left
+
+    node.right = t
+    node.height--
+
+    result.left = node
     return result
   }
 
-  static _rotateLeft(currentNode) {
-    let result = currentNode.right
-    let t = result.left
-    currentNode.right = t
-    currentNode.height--
-    result.left = currentNode
-    result.height++
+  static _rotateRight(node) {
+    let result = node.left
+    let t = result.right
+
+    node.left = t
+    node.height--
+
+    result.right = node
     return result
   }
 ```
@@ -182,23 +273,26 @@ func (n *AVLNode) rotateRight() *AVLNode {
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
-  static rotateRight(currentNode: IAVLNode): IAVLNode {
-    let result = currentNode!.left
-    let t = result!.right
-    currentNode!.left = t
-    currentNode!.height--
-    result!.right = currentNode
-    result!.height++
+  // class AVLNode
+  static rotateLeft(node: IAVLNode): IAVLNode {
+    let result = node!.right
+    let t = result!.left
+
+    node!.right = t
+    node!.height--
+
+    result!.left = node
     return result
   }
 
-  static rotateLeft(currentNode: IAVLNode): IAVLNode {
-    let result = currentNode!.right
-    let t = result!.left
-    currentNode!.right = t
-    currentNode!.height--
-    result!.left = currentNode
-    result!.height++
+  static rotateRight(node: IAVLNode): IAVLNode {
+    let result = node!.left
+    let t = result!.right
+
+    node!.left = t
+    node!.height--
+
+    result!.right = node
     return result
   }
 ```
@@ -221,9 +315,8 @@ rebalance tree
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *AVLNode) insert(val int) {
-  if n.value > val { n.left = n.left.insertHelper(val) } 
-  else { n.right = n.right.insertHelper(val) }
+func (n *AVLNode) insert(val int) IBSTNode {
+  return n.insertHelper(val)
 }
 
 func (n *AVLNode) insertHelper(val int) *AVLNode {
@@ -239,46 +332,42 @@ func (n *AVLNode) insertHelper(val int) *AVLNode {
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  // class AVLNode
   insert(val) {
-    if (this.value > val)
-      this.left = AVLNode._insertHelper(val, this.left)
-    else
-      this.right = AVLNode._insertHelper(val, this.right)
+    return AVLNode._insertHelper(val, this)
   }
 
-  static _insertHelper(val, currentNode) {
-    if (currentNode === null)
+  static _insertHelper(val, node) {
+    if (node === null)
       return new AVLNode(val)
 
-    if (currentNode.value > val)
-        currentNode.left = AVLNode._insertHelper(val, currentNode.left)
+    if (node.value > val)
+      node.left = AVLNode._insertHelper(val, node.left)
     else
-        currentNode.right = AVLNode._insertHelper(val, currentNode.right)
+      node.right = AVLNode._insertHelper(val, node.right)
 
-    return AVLNode._rotate(currentNode)
+    return AVLNode._rotate(node)
   }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
-  public insert(val: number) {
-    if (this.value > val)
-      this.left = AVLNode.insertHelper(val, this.left)
-    else
-      this.right = AVLNode.insertHelper(val, this.right)
+  // class AVLNode
+  public insert(val: number): IAVLNode {
+    return AVLNode.insertHelper(val, this)
   }
 
-    static insertHelper(val: number, currentNode: IAVLNode): IAVLNode {
-    if (currentNode === null)
+  static insertHelper(val: number, node: IAVLNode): IAVLNode {
+    if (node === null)
       return new AVLNode(val)
 
-    if (currentNode.value > val)
-        currentNode.left = AVLNode.insertHelper(val, currentNode.left)
+    if (node.value > val)
+      node.left = AVLNode.insertHelper(val, node.left)
     else
-        currentNode.right = AVLNode.insertHelper(val, currentNode.right)
+      node.right = AVLNode.insertHelper(val, node.right)
 
-    return AVLNode.rotate(currentNode)
+    return AVLNode.rotate(node)
   }
 ```
   </TabItem>
@@ -318,10 +407,10 @@ func (n *AVLNode) removeHelper(val int) *AVLNode {
     return AVLNode._removeHelper(val, this)
   }
 
-  static _removeHelper(val, currentNode) {
+  static _removeHelper(val, node) {
     // remove v: same as BSTNode 
     // ,,,
-    return AVLNode._rotate(result)
+    return AVLNode._rotate(node)
   }
 ```
   </TabItem>
@@ -332,10 +421,10 @@ func (n *AVLNode) removeHelper(val int) *AVLNode {
     return AVLNode.removeHelper(val, this)
   }
 
-  static removeHelper(val:number, currentNode: IAVLNode): IAVLNode {
+  static removeHelper(val:number, node: IAVLNode): IAVLNode {
     // remove v: same as BSTNode 
     // ,,,
-    return AVLNode.rotate(result)
+    return AVLNode.rotate(node)
   }
 ```
   </TabItem>

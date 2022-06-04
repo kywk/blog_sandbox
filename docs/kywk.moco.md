@@ -1,6 +1,10 @@
 ---
-sidebar_position: 1
+title: kywk.moco
+tags: [awesome]
 ---
+
+Around kywk.moco
+================
 
 
 <!--

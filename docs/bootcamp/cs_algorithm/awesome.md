@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 title: Awesome Resources
-tags: [study, awesome, algorithm]
+tags: [bootcamp, awesome, algorithm]
 ---
 
 Awesome Algorithm Resources

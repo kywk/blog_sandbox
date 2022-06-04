@@ -1,6 +1,6 @@
 ---
 title: "[DS] Binary Search Tree"
-tags: [study, algorithm, cs, leetcode]
+tags: [bootcamp, algorithm, cs, leetcode]
 
 date: 2022-05-30
 categories: [algorithm]
@@ -228,56 +228,71 @@ func (n *BSTNode) search(val int) bool {
   <TabItem value="go" label="Go" default>
 
 ``` go
-func (n *BSTNode) insert(val int) {
-  if val < n.value {
-    if n.left == nil {
-      n.left = newBSTNode(val)
-    } else {
-      n.left.insert(val)
-    }
-  } else {
-    if n.right == nil {
-      n.right = newBSTNode(val)
-    } else {
-      n.right.insert(val)
-    }
-  }
+func (bst *BST) Insert(val int) {
+  if bst.root == nil { return }
+  bst.root = bst.root.insert(val)
+}
+
+func (n *BSTNode) insert(val int) IBSTNode {
+  return n.insertHelper(val)
+}
+
+func (n *BSTNode) insertHelper(val int) *BSTNode {
+  if n == nil { return newBSTNode(val) }
+
+  if val < n.value { n.left = n.left.insertHelper(val) } 
+  else { n.right = n.right.insertHelper(val) }
+  return n
 }
 ```
   </TabItem>
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  // class BST
   insert(val) {
-    if (val < this.value) {
-      if (this.left === null)
-        this.left = new BSTNode(val)
-      else
-        this.left.insert(val)
-    } else {
-      if (this.right === null)
-        this.right = new BSTNode(val)
-      else
-        this.right.insert(val)
-    }
+    if (this.root === null) return
+    this.root = this.root.insert(val)
+  }
+
+  // class BSTNode
+  insert(val) {
+    return BSTNode._insertHelper(val, this)
+  }
+
+  static _insertHelper(val, node) {
+    if (node === null) return new BSTNode(val)
+
+    if (val < node.value)
+      node.left = BSTNode._insertHelper(val, node.left)
+    else
+      node.right = BSTNode._insertHelper(val, node.right)
+    return node
   }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
-  public insert(val: number) {
-    if (val < this.value) {
-      if (this.left === null)
-        this.left = new BSTNode(val)
-      else
-        this.left.insert(val)
-    } else {
-      if (this.right === null)
-        this.right = new BSTNode(val)
-      else
-        this.right.insert(val)
-    }
+  // class BST
+  insert(val: number) {
+    if (this.root === null) return
+    this.root = this.root.insert(val)
+  }
+
+  // class BSTNode
+  public insert(val: number): IBSTNode {
+    return BSTNode.insertHelper(val, this)
+  }
+
+  static insertHelper(val: number, node: IBSTNode): IBSTNode {
+    if (node === null) return new BSTNode(val)
+
+    if (val < node.value)
+      node.left = BSTNode.insertHelper(val, node.left)
+    else
+      node.right = BSTNode.insertHelper(val, node.right)
+    return node
   }
 ```
   </TabItem>
@@ -331,83 +346,77 @@ func (n *BSTNode) removeHelper(val int) *BSTNode {
   <TabItem value="js" label="JavaScript">
 
 ``` js
-  // Class BST
+  // class BST
   remove(val) {
     if (this.root === null) return
     this.root = this.root.remove(val)
   }
 
-  // Class BSTNode
+  // class BSTNode
   remove(val) {
     return BSTNode._removeHelper(val, this)
   }
 
-  static _removeHelper(val, currentNode) {
-    if (currentNode === null) return null
+  static _removeHelper(val, node) {
+    if (node === null) return null
 
-    let result
-    if (val < currentNode.value) {
-      currentNode.left = BSTNode._removeHelper(val, currentNode.left)
-      result = currentNode
-    } else if (currentNode.value < val) {
-      currentNode.right = BSTNode._removeHelper(val, currentNode.right)
-      result = currentNode
+    if (val < node.value) {
+      node.left = BSTNode._removeHelper(val, node.left)
+    } else if (node.value < val) {
+      node.right = BSTNode._removeHelper(val, node.right)
     } else {
-      if ((currentNode.left === null) && (currentNode.right === null))
+      if ((node.left === null) && (node.right === null))
         return null
-      else if (currentNode.left === null)
-        result = currentNode.right
-      else if (currentNode.right === null)
-        result = currentNode.left
+      else if (node.left === null)
+        result = node.right
+      else if (node.right === null)
+        result = node.left
       else {
-        let successor = currentNode.right.findMin()
-        currentNode.value = successor
-        currentNode.right = BSTNode._removeHelper(successor, currentNode.right)
-        result = currentNode
+        let successor = node.right.findMin()
+        node.value = successor
+        node.right = BSTNode._removeHelper(successor, node.right)
       }
     }
-    return result
+    return node
   }
 ```
   </TabItem>
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
-  // Class BST
+  // class BST
   remove(val: number) {
     if (this.root === null) return
     this.root = this.root.remove(val)
   }
 
-  // Class BSTNode
-  public remove(val: number): BSTNode | null {
+  // class BSTNode
+  public remove(val: number): IBSTNode {
     return BSTNode.removeHelper(val, this)
   }
-  static removeHelper(val: number, currentNode: IBSTNode): IBSTNode {
-    if (currentNode === null) return null
 
-    let result
-    if (val < currentNode.value) {
-      currentNode.left = BSTNode.removeHelper(val, currentNode.left)
-      result = currentNode
-    } else if (currentNode.value < val) {
-      currentNode.right = BSTNode.removeHelper(val, currentNode.right)
-      result = currentNode
+  static removeHelper(val: number, node: IBSTNode): IBSTNode {
+    if (node === null)
+      return null
+
+    if (val < node.value) {
+      node.left = BSTNode.removeHelper(val, node.left)
+    } else if (node.value < val) {
+      node.right = BSTNode.removeHelper(val, node.right)
     } else {
-      if ((currentNode.left === null) && (currentNode.right === null))
+      if ((node.left === null) && (node.right === null))
         return null
-      else if (currentNode.left === null)
-        result = currentNode.right
-      else if (currentNode.right === null)
-        result = currentNode.left
+      else if (node.left === null)
+        node = node.right
+      else if (node.right === null)
+        node = node.left
       else {
-        let successor = currentNode.right.findMin()
-        currentNode.value = successor
-        currentNode.right = BSTNode.removeHelper(successor, currentNode.right)
-        result = currentNode
+        let successor = node.right.findMin()
+        node.value = successor
+        node.right = BSTNode.removeHelper(successor, node.right)
       }
     }
-    return result
+    return node
   }
 ```
   </TabItem>

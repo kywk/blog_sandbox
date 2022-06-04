@@ -1,6 +1,6 @@
 ---
 title: "[ALGO] Sorting"
-tags: [study, algorithm, cs, leetcode]
+tags: [bootcamp, algorithm, cs, leetcode]
 
 date: 2022-05-26
 categories: [algorithm]

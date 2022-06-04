@@ -1,6 +1,6 @@
 ---
 title: "[IEEE] TinyLFU"
-tags: [study, cs, ieee, cache, redis]
+tags: [bootcamp, cs, cache, redis]
 ---
 
 [IEEE] TinyLFU: A Highly Efficient Cache Admission Policy
@@ -8,8 +8,6 @@ tags: [study, cs, ieee, cache, redis]
 
 Cache Replacement
 -----------------
-
-
 
 
 
