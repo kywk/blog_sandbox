@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello Docusaurus","permalink":"/moco/blog/2022/05/20/move-to-docusaurus"}]}')}}]);

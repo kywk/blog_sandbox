@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[7666],{8460:function(k){k.exports=JSON.parse('{"label":"kywk","permalink":"/moco/blog/tags/kywk","allTagsPath":"/moco/blog/tags","count":1}')}}]);

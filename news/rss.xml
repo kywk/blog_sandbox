@@ -4,10 +4,18 @@
         <title>kywk.moco Blog</title>
         <link>https://kywk.github.io/moco/news</link>
         <description>kywk.moco Blog</description>
-        <lastBuildDate>Tue, 24 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-tw</language>
+        <item>
+            <title><![CDATA[WWDC 2022]]></title>
+            <link>https://kywk.github.io/moco/news/2022/06/07/wwdc</link>
+            <guid>/2022/06/07/wwdc</guid>
+            <pubDate>Tue, 07 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[2022.06.07 WWDC 2022]]></description>
+            <category>apple</category>
+        </item>
         <item>
             <title><![CDATA[The Future of the GitLab Web IDE]]></title>
             <link>https://kywk.github.io/moco/news/2022/05/24/gitlab-web-ide</link>
