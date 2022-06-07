@@ -4,7 +4,7 @@ description: 2022.05.24 The Future of the GitLab Web IDE
 authors: kywk
 tags: [gitlab]
 image: https://i.imgur.com/mErPwqL.png
-hide_table_of_contents: false
+hide_table_of_contents: true
 ---
 
 [GitLab 發表新 WebIDE 的特色與整合說明](https://about.gitlab.com/blog/2022/05/23/the-future-of-the-gitlab-web-ide/), 

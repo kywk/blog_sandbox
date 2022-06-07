@@ -12,12 +12,23 @@ import TabItem from '@theme/TabItem';
 [DS] AVL Tree
 =============
 
-AVL Tree
---------
+Feature
+-------
 
 A balanced BST is a BST that h = O(log N).
 AVL Tree (Adelson-Velskii & Landis, 1962) that is named after its 
 inventor: Adelson-Velskii and Landis.
+
+...detail TBD ...
+
+### extends BST ###
+
+AVL Tree 亦是一種 BST, 所有對 BST 的操作都適用於 AVL Tree.
+適合類別界面封裝概念, 操作時無須考慮是由那一種 Tree 實作, 透過類別封裝界面操作即可. 
+
+另一點則是實作上 AVL Tree 中許多函式都可以直接沿用 BST 界面, 
+也適合用繼承以利程式重複使用與維護.
+
 
 <Tabs>
   <TabItem value="go" label="Go" default>
@@ -120,6 +131,10 @@ v.height = max(v.left.height, v.right.height) + 1 (otherwise)
 // Balance Factor
 v.bf = v.left.height - v.right.height
 ````
+
+
+Method
+------
 
 ### rebalance ###
 
@@ -442,12 +457,6 @@ func (n *AVLNode) removeHelper(val int) *AVLNode {
 
 [Binary Heap](heap.md) 一些特性適合練習與解釋 Class 中的 private / public / class method.
 而 BST / AVL Tree 則很適合 OOP 中的繼承和封裝概念. 
-
-AVL Tree 亦是一種 BST, 所有對 BST 的操作都適用於 AVL Tree.
-適合類別界面封裝概念. 操作時無須考慮是由那一種 Tree 實作, 透過類別封裝界面操作即可. 
-
-另一點則是實作上 AVL Tree 中許多函式都可以直接沿用 BST 界面, 
-適合用繼承已利程式重複使用與維護.
 
 這篇盡量以各語言中原生或模擬繼承的方式實作 AVL 對 BST 的繼承.
 而限於 Golang 的特性, 繼承和 Overriding 會讓程式變得過於複雜, 
