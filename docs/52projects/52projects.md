@@ -19,7 +19,7 @@ About 52 Projects
 ### 01-10 ###
 
 -   [01 - gRPC client / server in go](01_grpc.md)  
-    [about gRPC](../dev/spec/grpc.md) | 
+    [about gRPC](../bootcamp/spec/grpc.md) | 
     [dev notes](../go/go_grpc.md)
 
 

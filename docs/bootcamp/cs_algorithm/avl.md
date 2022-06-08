@@ -113,6 +113,22 @@ export class AVLNode extends BSTNode {
   <TabItem value="python" label="Python">
 
 ``` python
+class AVL(BST):
+    def __init__(self, data):
+        self.root = None
+        if isinstance(data, int):
+            self._root = AVLNode(data)
+        elif isinstance(data, list):
+            self._root = AVLNode(data[0])
+            for i in range(1, len(data), 1):
+                self.insert(data[i])
+
+class AVLNode(BSTNode):
+    def __init__(self, data):
+        self.value = data
+        self.left = None
+        self.right = None
+        self.height = 1
 ```
   </TabItem>
 </Tabs>
@@ -225,6 +241,23 @@ func (n *AVLNode) rotate() *AVLNode {
   <TabItem value="python" label="Python">
 
 ``` python
+    @classmethod
+    def rotate(cls, node):
+        left = AVLNode.height_helper(node.left)
+        right = AVLNode.height_helper(node.right)
+        bf = left - right
+
+        if bf > 1:
+            if AVLNode.height_helper(node.left.left) < AVLNode.height_helper(node.left.right):
+                node.left = AVLNode.rotate_left(node.left)
+            return AVLNode.rotate_right(node)
+        elif bf < -1:
+            if AVLNode.height_helper(node.right.left) > AVLNode.height_helper(node.right.right):
+                node.right = AVLNode.rotate_right(node.right)
+            return AVLNode.rotate_left(node)
+        else:
+            node.update_height()
+            return node
 ```
   </TabItem>
 </Tabs>
@@ -315,6 +348,27 @@ func (n *AVLNode) rotateRight() *AVLNode {
   <TabItem value="python" label="Python">
 
 ``` python
+    @classmethod
+    def rotate_left(cls, node):
+        result = node.right
+        t = result.left
+
+        node.right = t
+        node.height = node.height - 1
+
+        result.left = node
+        return result
+
+    @classmethod
+    def rotate_right(cls, node):
+        result = node.left
+        t = result.right
+
+        node.left = t
+        node.height = node.height - 1
+
+        result.right = node
+        return result
 ```
   </TabItem>
 </Tabs>
@@ -355,12 +409,10 @@ func (n *AVLNode) insertHelper(val int) *AVLNode {
   static _insertHelper(val, node) {
     if (node === null)
       return new AVLNode(val)
-
     if (node.value > val)
       node.left = AVLNode._insertHelper(val, node.left)
     else
       node.right = AVLNode._insertHelper(val, node.right)
-
     return AVLNode._rotate(node)
   }
 ```
@@ -376,12 +428,10 @@ func (n *AVLNode) insertHelper(val int) *AVLNode {
   static insertHelper(val: number, node: IAVLNode): IAVLNode {
     if (node === null)
       return new AVLNode(val)
-
     if (node.value > val)
       node.left = AVLNode.insertHelper(val, node.left)
     else
       node.right = AVLNode.insertHelper(val, node.right)
-
     return AVLNode.rotate(node)
   }
 ```
@@ -389,6 +439,26 @@ func (n *AVLNode) insertHelper(val int) *AVLNode {
   <TabItem value="python" label="Python">
 
 ``` python
+    # class AVL
+    def insert(self, val):
+        if self._root is None:
+            self._root = AVLNode(val)
+        self._root = self._root.insert(val)
+
+    # class AVLNode
+    def insert(self, val):
+        return AVLNode.insert_helper(val, self)
+
+    @classmethod
+    def insert_helper(cls, val, node):
+        if node is None:
+            return AVLNode(val)
+        if val < node.value:
+            node.left = AVLNode.insert_helper(val, node.left)
+        else:
+            node.right = AVLNode.insert_helper(val, node.right)
+        return AVLNode.rotate(node)
+
 ```
   </TabItem>
 </Tabs>
@@ -424,7 +494,7 @@ func (n *AVLNode) removeHelper(val int) *AVLNode {
 
   static _removeHelper(val, node) {
     // remove v: same as BSTNode 
-    // ,,,
+    // ...
     return AVLNode._rotate(node)
   }
 ```
@@ -438,7 +508,7 @@ func (n *AVLNode) removeHelper(val int) *AVLNode {
 
   static removeHelper(val:number, node: IAVLNode): IAVLNode {
     // remove v: same as BSTNode 
-    // ,,,
+    // ...
     return AVLNode.rotate(node)
   }
 ```
@@ -446,6 +516,14 @@ func (n *AVLNode) removeHelper(val int) *AVLNode {
   <TabItem value="python" label="Python">
 
 ``` python
+    def remove(self, val):
+        return AVLNode.remove_helper(val, self)
+
+    @classmethod
+    def remove_helper(cls, val, node):
+        # remove v: same as BSTNode 
+        # ...
+        return AVLNode.rotate(node)
 ```
   </TabItem>
 </Tabs>

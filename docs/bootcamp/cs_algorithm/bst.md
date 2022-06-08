@@ -151,6 +151,21 @@ export class BSTNode {
   <TabItem value="python" label="Python">
 
 ``` python
+class BST:
+    def __init__(self, data):
+        self._root = None
+        if isinstance(data, int):
+            self._root = BSTNode(data)
+        elif isinstance(data, list):
+            self._root = BSTNode(data[0])
+            for i in range(1, len(data), 1):
+                self.insert(data[i])
+
+class BSTNode:
+    def __init__(self, data):
+        self.value = data
+        self.left = None
+        self.right = None
 ```
   </TabItem>
 </Tabs>
@@ -192,6 +207,7 @@ func (n *BSTNode) search(val int) bool {
   <TabItem value="js" label="JavaScript">
 
 ``` js
+  // class BSTNode
   search(val) {
     if (this.value === val)
       return true
@@ -205,6 +221,7 @@ func (n *BSTNode) search(val int) bool {
   <TabItem value="ts" label="TypeScript">
 
 ``` ts
+  // class BSTNode
   public search(val: number): boolean {
     if (this.value === val)
       return true
@@ -218,6 +235,15 @@ func (n *BSTNode) search(val int) bool {
   <TabItem value="python" label="Python">
 
 ``` python
+    # class BSTNode
+    def search(self, val):
+        if self.value == val:
+            return True
+        if val < self.value:
+            return False if self.left == None else self.left.search(val)
+        else:
+            return False if self.right == None else self.right.search(val)
+
 ```
   </TabItem>
 </Tabs>
@@ -299,6 +325,26 @@ func (n *BSTNode) insertHelper(val int) *BSTNode {
   <TabItem value="python" label="Python">
 
 ``` python
+    # class BST
+    def insert(self, val):
+        if self._root is None:
+            self._root = BSTNode(val)
+        self._root = self._root.insert(val)
+
+    # class BSTNode
+    def insert(self, val):
+        return BSTNode.insert_helper(val, self)
+
+    @classmethod
+    def insert_helper(cls, val, node):
+        if node == None:
+            return BSTNode(val)
+
+        if val < node.value:
+            node.left = BSTNode.insert_helper(val, node.left)
+        else:
+            node.right = BSTNode.insert_helper(val, node.right)
+        return node 
 ```
   </TabItem>
 </Tabs>
@@ -423,6 +469,37 @@ func (n *BSTNode) removeHelper(val int) *BSTNode {
   <TabItem value="python" label="Python">
 
 ``` python
+    # class BST
+    def remove(self, val):
+        if self._root is None:
+            return
+        self._root = self._root.remove(val)
+
+    # class BSTNode
+    def remove(self, val):
+        return BSTNode.remove_helper(val, self)
+
+    @classmethod
+    def remove_helper(cls, val, node):
+        if node == None:
+            return None
+
+        if val < node.value:
+            node.left = BSTNode.remove_helper(val, node.left)
+        elif node.value < val:
+            node.right = BSTNode.remove_helper(val, node.right)
+        else:
+            if node.left == None and node.right == None:
+                return None
+            elif node.left == None:
+                node = node.right
+            elif node.right == None:
+                node = node.left
+            else:
+                successor = node.right.find_min()
+                node.value = successor
+                node.right = BSTNode.remove_helper(successor, node.right)
+        return node
 ```
   </TabItem>
 </Tabs>
@@ -476,6 +553,11 @@ func (n *BSTNode) findMax() int {
   <TabItem value="python" label="Python">
 
 ``` python
+    def find_min(self):
+        return self.value if self.left == None else self.left.find_min()
+
+    def find_max(self):
+        return self.value if self.right == None else self.right.find_max()-
 ```
   </TabItem>
 </Tabs>
@@ -554,6 +636,22 @@ func (n *BSTNode) findPredecessor(val int) int {
   <TabItem value="python" label="Python">
 
 ``` python
+    def find_predecessor(self, val):
+        predecessor = NOT_FOUND
+        node = self
+        while node != None and node.value != val:
+            if node.value < val:
+                predecessor = node.value
+                node = node.right
+            else:
+                node = node.left
+
+        if node == None:
+            return NOT_FOUND
+        if node.left != None:
+            return node.left.find_max()
+        else:
+            return predecessor
 ```
   </TabItem>
 </Tabs>
@@ -633,6 +731,22 @@ func (n *BSTNode) findSuccessor(val int) int {
   <TabItem value="python" label="Python">
 
 ``` python
+    def find_successor(self, val):
+        successor = NOT_FOUND
+        node = self
+        while node != None and node.value != val:
+            if val < node.value:
+                successor = node.value
+                node = node.left
+            else:
+                node = node.right
+
+        if node == None:
+            return NOT_FOUND
+        if node.right != None:
+            return node.right.find_min()
+        else:
+            return successor
 ```
   </TabItem>
 </Tabs>
@@ -706,6 +820,14 @@ func (n *BSTNode) inorder(buf *[]int) {
   <TabItem value="python" label="Python">
 
 ``` python
+    def inorder(self):
+        result = []
+        if self.left != None:
+            result.extend(self.left.inorder())
+        result.append(self.value)
+        if self.right != None:
+            result.extend(self.right.inorder())
+        return result
 ```
   </TabItem>
 </Tabs>
