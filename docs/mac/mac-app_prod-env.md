@@ -1,11 +1,11 @@
 ---
-sidebar_position: 1
-title: "系統安裝紀錄"
-tags: ["Mac", "kywk"]
-
+title: Mac 系統與 Apps 安裝紀錄
+description: My macOS Apps notes.
+authurs: kywk
+tags: [Mac, kywk]
 date: 2022-02-26T14:05:03+08:00
-image: "https://lh3.googleusercontent.com/pw/ACtC-3cYYtkzJjo_oG7Gzqq8T8XQm4V_qLE3wGWVKOahp6YT4lo-on60NJmjrkkatnizX1b-uID-MCM2ztsXH9z27cMRtql3PA5cpYZYbMfSPuM5Yh3MmqnjnnXYkTg6vtIiBL5SGAQRRAI9zEBIOoyP3tZpuA?authuser=0"
-categories: ["mac"]
+image: https://i.imgur.com/mErPwqL.png
+hide_table_of_contents: false
 ---
 
 [Mac] 系統與 Apps 安裝紀錄 2022.Jun
@@ -225,6 +225,3 @@ See Also
 -   [10 BEST Mac Apps for Productivity (in 2022)!](https://www.youtube.com/watch?v=-xXc7qeiC8I)
 -   [5 款免费又好用的 Mac 菜单栏软件 - Mac云课堂](https://www.youtube.com/watch?v=OWdOq7E62Ws)
 -   [22 FREE Mac Apps I use to BOOST MY PRODUCTIVITY - YouTube](https://www.youtube.com/watch?v=w3Vue4bdPyM)
--   [實用 Mac Apps 推薦 – 魏志軒 – Medium](https://goo.gl/xYCwZa)
--   [2018 最新 MacBook 必裝程式與設定 – Ryan Hsu – Medium](https://goo.gl/YZfREq)
--   [Cask 讓 OSX 安裝軟體更有效率 | VISIONCAN](https://goo.gl/Z9BKtx) | [list](https://goo.gl/y7AU5x)
