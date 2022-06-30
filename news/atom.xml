@@ -2,11 +2,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kywk.github.io/moco/news</id>
     <title>kywk.moco Blog</title>
-    <updated>2022-06-07T00:00:00.000Z</updated>
+    <updated>2022-06-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kywk.github.io/moco/news"/>
     <subtitle>kywk.moco Blog</subtitle>
     <icon>https://kywk.github.io/moco/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[GitHub Copilot GA]]></title>
+        <id>/2022/06/24/github-copilot</id>
+        <link href="https://kywk.github.io/moco/news/2022/06/24/github-copilot"/>
+        <updated>2022-06-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2022.06.24 GitHub Copilot GA]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="github-copilot">GitHub Copilot<a class="hash-link" href="#github-copilot" title="標題的直接連結">​</a></h2><p>這幾天開發者社群最大的新聞應該是 GitHub <a href="https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/" target="_blank" rel="noopener noreferrer">公告正式開放</a>
+<a href="https://github.com/features/copilot/" target="_blank" rel="noopener noreferrer">GitHub Copilot</a>.
+Hacker News 上也討論的沸沸洋洋: <a href="https://news.ycombinator.com/item?id=31825742" target="_blank" rel="noopener noreferrer">GitHub Copilot is generally available</a></p><p>價錢也出來了，US$10/mo 或是 US$100/year：</p><blockquote><blockquote><p>We’re making GitHub Copilot, an AI pair programmer that suggests code in your editor, generally available to all developers for $10 USD/month or $100 USD/year. It will also be free to use for verified students and maintainers of popular open source projects.</p></blockquote></blockquote><p>書寫程式時, GitHub Copilot AI 會即時跑出建議的修改或是下一行的編寫, 建議的資訊,
+不單是幾個字或一行程式, GitHub Copilot 會以最完整的解決方法來協助開發者解決問題.
+無論是提供樣板程式碼, 整個單元測試, 甚至是更複雜的演算法等。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="tabnine">Tabnine<a class="hash-link" href="#tabnine" title="標題的直接連結">​</a></h2><p>早些年前, <a href="https://www.tabnine.com/" target="_blank" rel="noopener noreferrer">Tabnine</a> 就提供了利用 AI 分析程式碼的自動完成工具.
+傳統 IDE 的自動補完, 大多是分析程式碼中的變數, 物件屬性, 函式等, 提供對應的自動完成建議.</p><p>而 Tabnine 除了程式庫中的既有程式碼等分析資料外,
+也會利用 AI 訓練分析的結果, 提供開發者可能會需要的自動補完推薦.
+長期使用下來, 覺得 Tabnine 確實對開發上是有幫助的.</p><p>但 Tabnine 主要僅提供自動完成的推薦, 開發上還是一行行自己輸入.
+而 GitHub Copilot 提供更多程式片段, 可能是一整個功能區塊程式樣板等.</p><p>可以理解 GitHub Copilot 帶來的便利.
+畢竟過往經驗中, 有相當程度功能區塊其實都非常雷同,
+尤其是像 CRUD / Error Handling / unit test / ... 等程式片段.
+很多時候開發上確實是複製貼上到不同專案而已.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="amazon-codewhisperer">Amazon CodeWhisperer<a class="hash-link" href="#amazon-codewhisperer" title="標題的直接連結">​</a></h2><p>無獨有偶地, 近日亞馬遜在 re:Mars 公布了一款名為 CodeWhisperer 的自動寫程式輔助工具的預覽版本.</p><p>亞馬遜的 CodeWhisperer 是一種能協助軟體工程師擁有更高寫程式效率的 AI 工具,
+根據亞馬遜的說法，CodeWhisperer 將不斷檢查工程師所寫的程式碼, 並且提供正確的建議. </p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="issues">Issues<a class="hash-link" href="#issues" title="標題的直接連結">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="license">license<a class="hash-link" href="#license" title="標題的直接連結">​</a></h3><p>目前這個服務被著重討論的問題, 第一個是 license 問題，
+Hacker News 上有人提到有些程式碼的授權是有感染性的 GPL 類的,
+若 GitHub Copilot 自動完成的程式片段引用了這些程式碼, 是否違反 GPL 規範,
+這是個全新的問題, 在法院上還沒有被戰過.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="code-quality">code quality<a class="hash-link" href="#code-quality" title="標題的直接連結">​</a></h3><p>另一個疑慮是, 學術界針對 Copilot 的<a href="https://arxiv.org/pdf/2108.09293.pdf" target="_blank" rel="noopener noreferrer">研究論文</a>指出,
+在 1,689 個使用 Copilot 建議的程式中, 有 40% 的程式生成的程式碼具有已知的弱點.
+而另一篇論文則指出 Github Copilot 事實上加速了劣質程式碼的產生.</p><p>所以類似工具的使用, 仍然很依靠工程師對程式碼掌握的程度.
+否則程式產出快速, 但後續除錯的功夫, 可能事倍功半.
+(也許之後會有 AI debug 服務吧, 笑)</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a class="hash-link" href="#references" title="標題的直接連結">​</a></h2><ul><li><a href="https://buzzorange.com/techorange/2022/06/22/github-copilot-ai-coding/" target="_blank" rel="noopener noreferrer">工程師歡呼吧！寫程式 AI 神器 GitHub Copilot 月租費只要 120 | TechOrange 科技報橘</a>
+| <a href="https://buzzorange.com/techorange/2022/06/24/amazon-codewhisperer/" target="_blank" rel="noopener noreferrer">亞馬遜也推出了 AI 寫程式助手 CodeWhisperer，和 Github Copilot 有何不同？</a>
+| <a href="https://buzzorange.com/techorange/2019/08/02/nice-coding-tool/" target="_blank" rel="noopener noreferrer">工程師殺手級工具！一秒自動補齊後續程式碼，還支援 23 種程式語言</a></li><li><a href="https://www.techbang.com/posts/97357-github-launches-ai-tool-copilot-10-a-month-to-help-developers" target="_blank" rel="noopener noreferrer">工程師可以偷懶了？Github可幫你寫程式的AI輔助工具Copilot上線，月費只要10美元 | T客邦</a></li><li><a href="https://blog.gslin.org/archives/2022/06/23/10751/github-copilot-%e5%ae%a3%e4%bd%88-ga/" target="_blank" rel="noopener noreferrer">GitHub Copilot 宣佈 GA – Gea-Suan Lin's BLOG</a>
+| <a href="https://blog.gslin.org/archives/2022/06/24/10755/aws-%e4%b9%9f%e6%8e%a8%e5%87%ba%e4%ba%86-github-copilot-%e7%9a%84%e7%ab%b6%e7%88%ad%e5%b0%8d%e6%89%8b-amazon-codewhisperer/" target="_blank" rel="noopener noreferrer">AWS 也推出了 GitHub Copilot 的競爭對手 Amazon CodeWhisperer</a>
+| <a href="https://blog.gslin.org/archives/2022/06/24/10756/%e6%b8%ac%e8%a9%a6-neovim-github-copilot/" target="_blank" rel="noopener noreferrer">測試 Neovim + GitHub Copilot</a></li><li><a href="https://www.ithome.com.tw/news/149710" target="_blank" rel="noopener noreferrer">GitLab與Tabnine合作向開發者提供AI程式碼完成功能 | iThome</a></li></ul>]]></content>
+        <author>
+            <name>kywk</name>
+            <uri>https://github.io/kywk</uri>
+        </author>
+        <category label="github" term="github"/>
+        <category label="ai" term="ai"/>
+        <category label="develop" term="develop"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[WWDC 2022]]></title>
         <id>/2022/06/07/wwdc</id>
@@ -17,7 +55,8 @@
 而從 2020 一鳴驚人的 M1 處理器面世之後, 蘋果大型發表會幾乎都有更強大後續更新發表.
 從 M1 Pro / M1 Max / M1 Ultra, 這次則發表了 M2 處理器.</p><p><img loading="lazy" src="https://lh3.googleusercontent.com/pw/AM-JKLUS3s2ZxQ08lmQy9o2b_-rtk7MPtbtYUrqBuwbxn68l2ZjFZ92o-79qlA4Z7dJCy7vdag4QuiDw2tTyrDFiq1D_Y0YrsHbyQy5pRmiMDVeBixwV6f1WiKw8OQK7n1IPz-2IM0pmGcyhTqrO8ujAgENt8g=w730-no?authuser=0" class="img_ev3q"></p><p>有趣的是, 在官方發表的訊息看來, M2 處理器, 除了採用新一代的 5nm 製程外,
 本質架構上似乎是和 M1 一樣, 由 A14 魔改而來的版本.
-期待的以 A15 核心發展而來的 M2 似乎還在路上?</p><p>過去 Intel CPU, 以架構和製程各每兩年一次重大更新交錯發表聞名的 Tick-Tock 戰略,
+期待的以 A15 核心發展而來的 M2 似乎還在路上?</p><p>更新: 後續多家媒體的評測分析來看, 大多認為 M2 採用的應該是 A15 核心.
+不過官方沒有正式消息, 先補充備記於此.</p><p>過去 Intel CPU, 以架構和製程各每兩年一次重大更新交錯發表聞名的 Tick-Tock 戰略,
 而好些時間發表效能又不符合期待, 被戲稱為擠牙膏.</p><p>M2 相對於 M1 已有兩年時間, 體質架構上沒有改變, 而是製程的成長帶來了效能提昇.
 兩年之後的效能提昇了 18%, 似乎和擠牙膏時期的 Intel 差不多?
 期許 Apple 別走向 Intel 後塵, 期待市場上有多樣各自特色的產品供應選擇.</p><p><img loading="lazy" src="https://lh3.googleusercontent.com/pw/AM-JKLW4veGa_SdcqdqW7DQ9GbTayruErPhiGYX5hKpWg806evFR3yu9TF_CFd3iJF3p9bATP_Cm8nMvgdx5YkOU7mpEdYzEsNApk3syao4KmDP1z3lKthY1o4gAKq5gBu_Mt_BFQP2WC2xm6S0iNuMHs7S-eQ=w730-no?authuser=0" class="img_ev3q"></p><p>WWDC 2022 上另一個新硬體是和 2020 M1 一起發表的 Macbook Air / Macbook Pro 13".
