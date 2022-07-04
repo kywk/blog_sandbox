@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[5069],{8994:function(e){e.exports=JSON.parse('{"label":"react","permalink":"/moco/docs/tags/react","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"react/awesome","title":"Awesome Resources","description":"","permalink":"/moco/docs/react/awesome"}]}')}}]);
