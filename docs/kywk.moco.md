@@ -35,4 +35,26 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+
+02 52 Projects
+05 BOOTCAMP
+
+11 Go
+12 Node.js
+13 TypeScript
+14 Python
+
+21 Web
+22 React
+
+41 DevOps
+42 SRE
+43 CLI
+
+71 Utilities
+72 Machintosh
+
+99 Miscellaneous
+
 -->
+
