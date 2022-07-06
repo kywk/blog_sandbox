@@ -27,3 +27,9 @@ Time to give up GitHub?
 自由軟體若能適當結合商業行為, 才能走得更遠.
 
 ref: [Give Up GitHub - Software Freedom Conservancy](https://sfconservancy.org/GiveUpGitHub/)
+
+_22.07.05 update_
+ 
+相關後續報導:
+-   [開源社群發起抵制！工程師 AI 助手 Github Copilot 為何被 NGO 點名？ | TechOrange 科技報橘](https://buzzorange.com/techorange/2022/07/05/github-pilot-violate-open-source-non-profit/)
+-   [放棄 GitHub：時機已到？Copilot收費，惹怒軟體自由保護協會SFC | T客邦](https://www.techbang.com/posts/97658-abandoning-github-the-time-has-come-copilot-charges-a-fee)
