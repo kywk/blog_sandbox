@@ -45,7 +45,8 @@ import TabItem from '@theme/TabItem';
 14 Python
 
 21 Web
-22 React
+25 ReactNative
+26 Flutter
 
 41 DevOps
 42 SRE
