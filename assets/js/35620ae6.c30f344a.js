@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[783],{6135:function(e){e.exports=JSON.parse('{"label":"flutter","permalink":"/moco/docs/tags/flutter","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"Flutter/awesome","title":"Awesome Resources","description":"","permalink":"/moco/docs/Flutter/awesome"}]}')}}]);
