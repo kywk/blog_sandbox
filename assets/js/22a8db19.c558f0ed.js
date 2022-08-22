@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[7862],{1177:function(e){e.exports=JSON.parse('{"label":"reactnative","permalink":"/moco/docs/tags/reactnative","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"ReactNative/awesome","title":"Awesome Resources","description":"","permalink":"/moco/docs/ReactNative/awesome"}]}')}}]);
