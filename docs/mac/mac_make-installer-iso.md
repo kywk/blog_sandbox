@@ -1,10 +1,17 @@
 ---
+#id: kywk-moco
 title: 製作 macOS 安裝 ISO
+description: make installer ISO
 tags: [Mac]
 
+#sidebar_position: 1
+#sidebar_label: Easy
+#sidebar_class_name: green
+
+hide_table_of_contents: true
+
 date: 2021-04-06T11:18:48+08:00
-image: "https://lh3.googleusercontent.com/pw/ACtC-3cYYtkzJjo_oG7Gzqq8T8XQm4V_qLE3wGWVKOahp6YT4lo-on60NJmjrkkatnizX1b-uID-MCM2ztsXH9z27cMRtql3PA5cpYZYbMfSPuM5Yh3MmqnjnnXYkTg6vtIiBL5SGAQRRAI9zEBIOoyP3tZpuA?authuser=0"
-categories: [mac]
+image: https://i.imgur.com/mErPwqL.png
 ---
 
 [Mac] 製作 macOS 安裝 ISO 檔

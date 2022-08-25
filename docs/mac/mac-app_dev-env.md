@@ -1,14 +1,20 @@
 ---
-sidebar_position: 2
-title: "開發環境建構"
-tags: [Mac, kywk]
+#id: kywk-moco
+title: macOS 開發環境建構
+description: macOS develop tools of Moo Cow
+tags: [Mac, devenv, kywk]
 
-date: 2021-02-26T14:53:37+08:00
+sidebar_position: 2
+#sidebar_label: Easy
+#sidebar_class_name: green
+
+#hide_table_of_contents: false
+
+date: 2022-08-13T00:00:00+08:00
 image: "https://lh3.googleusercontent.com/pw/ACtC-3cYYtkzJjo_oG7Gzqq8T8XQm4V_qLE3wGWVKOahp6YT4lo-on60NJmjrkkatnizX1b-uID-MCM2ztsXH9z27cMRtql3PA5cpYZYbMfSPuM5Yh3MmqnjnnXYkTg6vtIiBL5SGAQRRAI9zEBIOoyP3tZpuA?authuser=0"
-categories: [mac]
 ---
 
-[Mac] 開發環境建構 2021.Feb
+[Mac] 開發環境建構 2022.Aug
 =========================
 
 _last updated: 2021-02-26T14:53:37+08:00_

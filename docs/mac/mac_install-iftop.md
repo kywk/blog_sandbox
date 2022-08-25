@@ -1,9 +1,17 @@
 ---
+#id: kywk-moco
 title: "iftop 安裝失敗解決"
+description: install iftop
 tags: [Mac]
 
+#sidebar_position: 1
+#sidebar_label: Easy
+#sidebar_class_name: green
+
+hide_table_of_contents: true
+
 date: 2020-12-07T16:48:04+08:00
-categories: [mac]
+image: "https://lh3.googleusercontent.com/pw/ACtC-3fnLstA2rsbmbt0hI7IWqhfzOU17UzGFO6pEIfoC2_x_l526rOlZ3_p4RbWvVFWlT6uMlnPMzjCSxDILtn7Er5Ch0JPYJReE0BhmCXqJh6TsqrygLrL17dcz1Dyq3eJ7MZhHDqQhvWbX3zJvneD1CRanA=w800-no?authuser=0"
 ---
 
 [Mac] iftop 安裝失敗與解決方式

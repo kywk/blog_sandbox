@@ -1,14 +1,20 @@
 ---
-title: Mac 系統與 Apps 安裝紀錄
-description: My macOS Apps notes.
-authurs: kywk
-tags: [Mac, kywk]
-date: 2022-02-26T14:05:03+08:00
+#id: mac-app_prod-env
+title: macOS Apps 安裝紀錄
+description: kywk's favitote macOS Apps
+tags: [Mac, devenv, kywk]
+
+sidebar_position: 1
+#sidebar_label: Easy
+#sidebar_class_name: green
+
+#hide_table_of_contents: false
+
+date: 2022-08-13T14:05:03+08:00
 image: https://i.imgur.com/mErPwqL.png
-hide_table_of_contents: false
 ---
 
-[Mac] 系統與 Apps 安裝紀錄 2022.Jun
+[Mac] 系統與 Apps 安裝紀錄 2022.Aug
 =================================
 
 重新整理 blog 文章時, 順便整理紀錄一下目前日常使用的 Apps.
@@ -92,6 +98,11 @@ $ brew install --cask alfred
 
 [_AltTab_](https://alt-tab-macos.netlify.app/) 和 Windows 一樣使用 `Alt + Tab` 切換視窗,
 可在同一程式多個視窗中切換, 比 macOS 內建僅能在應用程式間切換來得快速方邊.
+
+### Pure Paste ###
+
+[_Pure Paste_](https://sindresorhus.com/pure-paste)
+讓預設貼上就是純文字，自動清除複製的文字樣式
 
 ### Rectangle ###
 
