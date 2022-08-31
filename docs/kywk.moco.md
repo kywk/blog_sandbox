@@ -14,14 +14,14 @@ date: 2022-08-13T00:00:00+08:00
 image: https://i.imgur.com/mErPwqL.png
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Around kywk.moco
 ================
 
 
 <!--
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="go" label="Go" default>

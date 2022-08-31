@@ -2,7 +2,7 @@
 #id: mac-app_prod-env
 title: macOS Apps 安裝紀錄
 description: kywk's favitote macOS Apps
-tags: [Mac, devenv, kywk]
+tags: [Mac, DevEnv, kywk]
 
 sidebar_position: 1
 #sidebar_label: Easy

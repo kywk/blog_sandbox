@@ -2,7 +2,7 @@
 #id: kywk-moco
 title: macOS 開發環境建構
 description: macOS develop tools of Moo Cow
-tags: [Mac, devenv, kywk]
+tags: [Mac, DevEnv, kywk]
 
 sidebar_position: 2
 #sidebar_label: Easy
@@ -37,7 +37,7 @@ CLI Environment
 ### iTerm2 ###
 
 ``` shell
-$ brew install iterm2
+brew install iterm2
 ```
 
 ### zsh and oh-my-zsh ###
@@ -53,21 +53,21 @@ macOS Mojave 以後已經內建 Zsh, 所以直接安裝 Oh My Zsh 即可.
 
 
 ``` shell
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 
 ``` shell
-$ brew install zsh-completion 
+brew install zsh-completion 
 ```
 
 ### Powerline Font ###
 
 ``` shell
-$ brew tap homebrew/cask-fonts
-$ brew install font-fira-code font-fira-mono font-fira-sans
-$ brew install font-source-code-pro
-$ brew install font-hack-nerd-font
+brew tap homebrew/cask-fonts
+brew install font-fira-code font-fira-mono font-fira-sans 
+brew install font-source-code-pro
+brew install font-hack-nerd-font
 ```
 
 
@@ -78,13 +78,13 @@ Base Environment
 ### [Docker](https://www.docker.com) ###
 
 ``` shell
-$ brew install docker
+brew install docker
 ```
 
 ### Brew formulae ###
 
 ``` shell
-$ brew install git tig tmux ncdu htop lesspipe tldr diff-so-fancy fd ripgrep thefuck ag
+brew install git tig zsh-completion tmux ncdu htop lesspipe sshtrix tldr diff-so-fancy fd ripgrep rclone thefuck ag svn moreutils
 ```
 
 
@@ -107,15 +107,15 @@ cat ". ~/.nvm/nvm.sh" >> .bashrc
 __Install node.js__
 
 ``` shell
-$ nvm install v8.11.1
-$ nvm alias default tls
-$ nvm use default
+nvm install v8.11.1
+nvm alias default tls
+nvm use default
 ```
 
 ### Go ###
 
 ``` shell
-$ brew install go
+brew install go
 ```
 
 
@@ -126,19 +126,19 @@ IDE & GUI Tools
 ### VSCode ###
 
 ``` shell
-$ brew install --cask visual-studio-code
+brew install --cask visual-studio-code
 ```
 
 ### GoLand ###
 
 ``` shell
-$ brew install --cask goland
+brew install --cask goland
 ```
 
 ### WebStorm ###
 
 ``` shell 
-$ brew install --cask webstorm
+brew install --cask webstorm
 ```
 
 ### Others ###
@@ -148,7 +148,7 @@ __[Fork](https://git-fork.com/)__
 Fork - a fast and friendly git client for Mac
 
 ```shell
-$ brew install fork
+brew install fork
 ```
 
 __Postman__
@@ -156,7 +156,7 @@ __Postman__
 The Collaboration Platform for API Development.
 
 ```shell
-$ brew install postman
+brew install postman
 ```
 
 __[Sequel Pro](http://www.sequelpro.com/)__
@@ -164,7 +164,7 @@ __[Sequel Pro](http://www.sequelpro.com/)__
 Sequel Pro is a fast, easy-to-use Mac database management application for working with MySQL databases.
 
 ```shell
-$ brew install sequel-pro
+brew install sequel-pro
 ```
 
 __[TablePlus](https://tableplus.com)__
@@ -172,7 +172,7 @@ __[TablePlus](https://tableplus.com)__
 Modern, Native Tool for Database Management.
 
 ```shell
-$ brew install tableplus
+brew install tableplus
 ```
 
 __[Redis Desktop Manager](https://rdm.dev)__
@@ -180,7 +180,7 @@ __[Redis Desktop Manager](https://rdm.dev)__
 Redis GUI management tool for Windows, Mac OS X, Ubuntu and Debian.
 
 ```shell
-$ brew install --cask another-redis-desktop-manager
+brew install --cask another-redis-desktop-manager
 ```
 
 __[Robo3T](https://robomongo.org)__
@@ -188,7 +188,7 @@ __[Robo3T](https://robomongo.org)__
 Robo 3T. Free, open-source MongoDB GUI
 
 ``` shell
-$ brew install tableplus
+brew install tableplus
 ```
 
 
