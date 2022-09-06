@@ -84,7 +84,7 @@ brew install docker
 ### Brew formulae ###
 
 ``` shell
-brew install git tig zsh-completion tmux ncdu htop lesspipe sshtrix tldr diff-so-fancy fd ripgrep rclone thefuck ag svn moreutils
+brew install git tig zsh-completion tmux ncdu htop lesspipe sshtrix tldr diff-so-fancy fd ripgrep rclone thefuck ag svn moreutils asdf
 ```
 
 

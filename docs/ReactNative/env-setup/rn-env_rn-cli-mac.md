@@ -1,6 +1,6 @@
 ---
-#id: mac-app_prod-env
-title: "React Native CLI for macOS"
+#id: mrn-rnv_rn-cli-mac
+title: "React Native CLI For macOS"
 description: React Native CLI for macOS
 tags: [ReactNative, DevEnv, Mac]
 
@@ -39,7 +39,7 @@ React Native 開發環境設置分成 Expo CLI 和 React Native CLI 兩種:
 
 __Target OS__
 
-<Tabs>
+<Tabs groupId="target-os">
   <TabItem value="iOS" label="iOS" default>
 
 Installing iOS dependencies
@@ -283,7 +283,7 @@ npx react-native init AwesomeTSProject --template react-native-template-typescri
 Running your React Native application
 -------------------------------------
 
-<Tabs>
+<Tabs groupId="target-os">
   <TabItem value="iOS" label="iOS" default>
 
 ### iOS App ###
@@ -300,7 +300,7 @@ yarn react-native run-ios
 這個指令會把 React Native 專案原生的部分進行編譯, 
 同時再另一個命令列起動 `Metro` 服務, 對 js code 的部分即時封裝打包.
 
-編譯打包完成後, 就可以看到 iOS 模擬氣自動開啟並執行 AwesomeProject 專案.
+編譯打包完成後, 就可以看到 iOS 模擬器自動開啟並執行 AwesomeProject 專案.
 
 ![](https://lh3.googleusercontent.com/pw/AL9nZEVnph4k7HbleAAPMyLPSIg9Wth9g3td6Ur6IXF3SvAIJpWFlBbXIPhiDBNbLvZ-WiPtnqayqBBUOJdQqjMGwHKKJcE1FN8DXmcox9A1_7DmIXNQ4ZbdzFVY5ejE0oT6xlk7i-Tc4nXnsUtyzOp-cl2Wnw=w800-no)
 

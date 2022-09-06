@@ -47,8 +47,9 @@ Around kywk.moco
 </Tabs>
 
 
-02 52 Projects
-05 BOOTCAMP
+00 52 Projects
+03 BOOTCAMP
+06 TechStack
 
 11 Go
 12 Node.js
