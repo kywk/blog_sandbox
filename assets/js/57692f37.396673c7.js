@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[6972],{761:function(c){c.exports=JSON.parse('{"label":"cache","permalink":"/moco/docs/tags/cache","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"bootcamp/cs-os_tilylfu","title":"[IEEE] TinyLFU","description":"Cache Replacement","permalink":"/moco/docs/bootcamp/cs-os_tilylfu"}]}')}}]);
