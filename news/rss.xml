@@ -4,10 +4,23 @@
         <title>kywk.moco Blog</title>
         <link>https://kywk.github.io/moco/news</link>
         <description>kywk.moco Blog</description>
-        <lastBuildDate>Fri, 01 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-tw</language>
+        <item>
+            <title><![CDATA[Next Figma?]]></title>
+            <link>https://kywk.github.io/moco/news/2022/09/16/prototype-platform</link>
+            <guid>/2022/09/16/prototype-platform</guid>
+            <pubDate>Fri, 16 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[2022.09.16 Next Figma?]]></description>
+            <content:encoded><![CDATA[<p>今天各大資訊 RSS 很熱門的新聞是 <a href="https://www.bloomberg.com/news/articles/2022-09-15/adobe-is-said-to-near-deal-to-buy-online-design-startup-figma" target="_blank" rel="noopener noreferrer">Adobe 宣佈要收購 Figma</a>:
+<a href="https://news.ycombinator.com/item?id=32850178" target="_blank" rel="noopener noreferrer">Adobe to acquire Figma for $20B | Hacker News</a>.</p><ul><li><a href="https://www.bnext.com.tw/article/71727/adobe-to-acquire-figma?" target="_blank" rel="noopener noreferrer">Adobe宣布以200億美元收購Figma！直接吃下最大競爭對手｜數位時代 BusinessNext</a></li><li><a href="https://chinese.engadget.com/adobe-figma-acquisition-040022025.html" target="_blank" rel="noopener noreferrer">Adobe 200 億美元收購同業新秀 Figma - Engadget 中文版</a></li><li><a href="https://www.inside.com.tw/article/28966-adobe-figma" target="_blank" rel="noopener noreferrer">【快訊】Adobe 要用 200 億美元買下 Figma 設計協作平台！ - INSIDE</a></li></ul><p>有趣的是 Hacker News 上另一則資訊 <a href="https://news.ycombinator.com/item?id=32851262" target="_blank" rel="noopener noreferrer">Penpot: Open-source design and prototyping platform | Hacker News</a>
+同時也上了 Daily Top 10, 看來大家對 Figma 之後的商業行為有許多疑慮.</p><p><img loading="lazy" src="https://lh3.googleusercontent.com/pw/AL9nZEUvTgBADizLXgJKMSkQvOiiUB78oQJCHeCRJTRgowphImX6pwq4Abp47IXIMLyDxm2n-guhoy2hhnGqOYf0_z9iBqBhUpogFgjj4fQw57tazteFea13p7VT4gRToVPU2Kbo7K18bsm2FcXShXwG2-I9OQ=w479-no?authuser=0" alt="hacker news daily top 10" class="img_ev3q"></p><blockquote><p>Penpot is the first Open Source design and prototyping platform meant for cross-domain teams.
+Non dependent on operating systems, Penpot is web based and works with open web standards (SVG).
+For all and empowered by the community.</p></blockquote><p>簡單試用了一下 <a href="https://penpot.app" target="_blank" rel="noopener noreferrer">Penpot</a>, 功能其實相當完善了, 是個被埋沒已久的專案.</p><p>不知道對這樣開源免費的專案, 最大競爭對手被產業巨頭收購是福是禍. 簡單紀錄.</p><ul><li><a href="https://penpot.app" target="_blank" rel="noopener noreferrer">Penpot - Design Freedom for Teams</a></li></ul>]]></content:encoded>
+            <category>acquire</category>
+        </item>
         <item>
             <title><![CDATA[Give up GitHub ?]]></title>
             <link>https://kywk.github.io/moco/news/2022/07/01/give-up-github</link>

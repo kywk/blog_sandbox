@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[6090],{8013:function(e){e.exports=JSON.parse('{"label":"acquire","permalink":"/moco/news/tags/acquire","allTagsPath":"/moco/news/tags","count":1}')}}]);
