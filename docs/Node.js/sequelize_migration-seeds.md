@@ -1,7 +1,7 @@
 ---
 #id: kywk-moco
-title: "Sequelize: Migration Seeds"
-description: Sequelize Migration Seeds
+title: "Sequelize: Migration"
+description: Sequelize Migration
 tags: [Node.js, ORM, Sequelize]
 
 #sidebar_position: 1
