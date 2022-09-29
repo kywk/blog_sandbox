@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[7545],{2605:function(o){o.exports=JSON.parse('{"label":"HTTP","permalink":"/moco/docs/tags/http","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"Security/CORS","title":"CORS","description":"Cross-Origin Resource Sharing","permalink":"/moco/docs/Security/CORS"}]}')}}]);

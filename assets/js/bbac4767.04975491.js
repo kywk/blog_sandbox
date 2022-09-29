@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[695],{6074:function(s){s.exports=JSON.parse('{"label":"Express","permalink":"/moco/docs/tags/express","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"Node.js/express_cors","title":"Express CORS","description":"Express CORS","permalink":"/moco/docs/Node.js/express_cors"}]}')}}]);
