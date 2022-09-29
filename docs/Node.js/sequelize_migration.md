@@ -14,8 +14,8 @@ date: 2022-09-15T00:00:00+08:00
 image: https://i.imgur.com/mErPwqL.png
 ---
 
-Sequelize Migration
-===================
+Sequelize Migration Seeds
+=========================
 
 Sequelize 是 Node.js 下相當主流的 ORM 套件.
 ORM 使用與否的爭論大概也和 `Space VS Tab`, `Vi VS Emacs` ... 一樣的永無止盡.

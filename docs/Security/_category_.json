@@ -1,5 +1,6 @@
 {
   "label": "Security",
+  "position": 07,
   "link": {
     "type": "generated-index",
     "description": "Information Security"
