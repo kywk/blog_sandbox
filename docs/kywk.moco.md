@@ -56,11 +56,11 @@ Around kywk.moco
 12 Node.js
 13 TypeScript
 14 Python
-15 Java
+15 Dart
 
 21 Web
-25 ReactNative
-26 Flutter
+25 Flutter
+26 ReactNative
 
 41 DevOps
 42 SRE
