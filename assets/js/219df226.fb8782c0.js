@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[5953],{1664:function(e){e.exports=JSON.parse('{"label":"DevOps","permalink":"/moco/docs/tags/dev-ops","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"devops/awesome","title":"Awesome Resources","description":"","permalink":"/moco/docs/devops/awesome"}]}')}}]);

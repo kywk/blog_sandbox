@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkkywk_moco=self.webpackChunkkywk_moco||[]).push([[2172],{4754:function(e){e.exports=JSON.parse('{"label":"IS","permalink":"/moco/docs/tags/is","allTagsPath":"/moco/docs/tags","count":1,"items":[{"id":"Security/CSRF","title":"CSRF","description":"Cross Site Request Forgery","permalink":"/moco/docs/Security/CSRF"}]}')}}]);
