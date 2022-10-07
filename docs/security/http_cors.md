@@ -1,8 +1,8 @@
 ---
 #id: cors
-title: CORS 
+title: "[HTTP] CORS"
 description: Cross-Origin Resource Sharing
-tags: [Security, HTTP, CORS]
+tags: [Security, HTTP]
 
 #sidebar_position: 1
 #sidebar_label: Easy

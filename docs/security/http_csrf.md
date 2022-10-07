@@ -1,8 +1,8 @@
 ---
 #id: kywk-moco
-title: CSRF
+title: "[HTTP] CSRF"
 description:  Cross Site Request Forgery
-tags: [IS]
+tags: [Security, HTTP]
 
 #sidebar_position: 1
 #sidebar_label: Easy
